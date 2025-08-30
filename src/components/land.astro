@@ -1,5 +1,6 @@
 ---
 import { Image } from 'astro:assets'
+import forestImg from "@/assets/images/forest.webp"
 
 // Landing page data
 const services = [
@@ -40,7 +41,7 @@ const testimonials = [
 <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
   <div class="absolute inset-0 bg-gradient-to-br from-primary/30 via-secondary/20 to-accent/25"></div>
   <Image
-    src="/peaceful-mountain-forest-landscape-with-morning-mi.png"
+    src={forestImg}
     alt="Paysage montagneux paisible avec brume matinale"
     width={1920}
     height={1080}
