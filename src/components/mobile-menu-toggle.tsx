@@ -21,7 +21,7 @@ export default function MobileMenuToggle({ navItems }: MobileMenuToggleProps) {
         size="sm"
         onClick={() => setIsOpen(!isOpen)}
         aria-label="Toggle menu"
-        className="organic-shape"
+        className="rounded-md"
       >
         {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
       </Button>
@@ -29,12 +29,12 @@ export default function MobileMenuToggle({ navItems }: MobileMenuToggleProps) {
       {/* Mobile Navigation */}
       {isOpen && (
         <div className="absolute top-full left-0 right-0 md:hidden">
-          <div className="mx-6 px-4 pt-4 pb-6 space-y-3 bg-card/95 backdrop-blur-sm organic-shape mt-4 border border-border/30 shadow-xl stone-texture">
+          <div className="mx-6 px-4 pt-4 pb-6 space-y-3 bg-card/95 backdrop-blur-sm rounded-lg mt-4 border border-border/30 shadow-xl">
             {navItems.map((item) => (
               <a
                 key={item.href}
                 href={item.href}
-                className="block px-6 py-4 text-foreground hover:text-primary hover:bg-muted/50 organic-shape-alt transition-all duration-300 text-lg font-sans"
+                className="block px-6 py-4 text-foreground hover:text-primary hover:bg-muted/50 rounded-md transition-all duration-300 text-base font-sans"
                 onClick={() => setIsOpen(false)}
               >
                 {item.label}
@@ -45,7 +45,7 @@ export default function MobileMenuToggle({ navItems }: MobileMenuToggleProps) {
                 asChild
                 className="w-full bg-primary hover:bg-primary/90 text-primary-foreground rounded-full py-4 font-sans"
               >
-                <a href="https://calendly.com/marie-dubois" target="_blank" rel="noopener noreferrer">
+                <a href="https://calendly.com/charlotte-drouilly" target="_blank" rel="noopener noreferrer">
                   <Phone className="w-4 h-4 mr-2" />
                   Réserver
                 </a>
