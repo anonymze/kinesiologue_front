@@ -1,50 +1,41 @@
-# Kinesiologue Front - React Native Project
+# Kinesiologue Frontend - Claude Code Configuration
 
 ## Project Overview
-React Native application for kinesiology practice management.
+This is an Astro + React + TypeScript frontend project for Kinesiologue, a French kinesiology practice platform.
 
-## Tech Stack
-- React Native
-- Expo
-- TypeScript
+## Technology Stack
+- **Framework**: Astro 5.13.5 with React 19.1.1
+- **Styling**: Tailwind CSS v4.1.12 
+- **Package Manager**: pnpm 10.15.0
+- **Language**: TypeScript
+- **UI Components**: Lucide React icons, class-variance-authority for component variants
 
 ## Development Commands
-```bash
-# Start development server
-npm start
+- `pnpm dev` - Start development server
+- `pnpm build` - Build for production
+- `pnpm preview` - Preview production build
 
-# Run on iOS simulator
-npm run ios
-
-# Run on Android emulator
-npm run android
-
-# Run tests
-npm test
-
-# Type checking
-npm run typecheck
-
-# Linting
-npm run lint
-```
+## Code Standards
+- Use kebab-case for component files (e.g., `appointment-card.tsx`, `patient-list.tsx`)
+- Prefer React functional components with TypeScript interfaces
+- Use `React.useEffect`, `React.useState` instead of direct imports
+- Default language: French (for French market)
+- Use semantic HTML elements in Astro components (`<article>`, `<section>`, `<main>`)
+- Include comprehensive SEO meta tags
+- Ensure accessibility with proper ARIA labels
 
 ## Project Structure
-- `/src` - Source code
-- `/components` - Reusable components
-- `/screens` - Screen components
-- `/navigation` - Navigation setup
-- `/services` - API and business logic
-- `/utils` - Utility functions
-- `/types` - TypeScript type definitions
-
-## Coding Standards
-- Use kebab-case for component files
-- Prefer functional components with TypeScript
-- Use React.useEffect, React.useState instead of direct imports
-- Include proper TypeScript interfaces for props
-- Follow existing project patterns
+- `/src/components/` - Reusable React components
+- `/src/components/ui/` - Base UI components
+- `/src/pages/` - Astro pages and routes
+- `/src/layouts/` - Astro layout components
+- `/src/styles/` - Global styles
+- `/src/types/` - TypeScript type definitions
+- `/src/utils/` - Utility functions
+- `/src/hooks/` - Custom React hooks
 
 ## Notes
-- Primary language: French (for French market)
-- Focus on accessibility and semantic structure
+- This is a French kinesiology practice platform
+- Focus on healthcare/medical UX patterns
+- Ensure mobile-first responsive design
+- Consider accessibility for healthcare users
