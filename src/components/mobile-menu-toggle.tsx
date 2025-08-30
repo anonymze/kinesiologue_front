@@ -34,7 +34,7 @@ export default function MobileMenuToggle({ navItems }: MobileMenuToggleProps) {
               <a
                 key={item.href}
                 href={item.href}
-                className="block px-6 py-4 text-foreground hover:text-primary hover:bg-muted/50 rounded-md transition-all duration-300 text-base font-sans"
+                className="block px-6 py-4 text-foreground hover:text-primary hover:bg-muted/50 rounded-md transition-all duration-300 text-base"
                 onClick={() => setIsOpen(false)}
               >
                 {item.label}
@@ -43,7 +43,7 @@ export default function MobileMenuToggle({ navItems }: MobileMenuToggleProps) {
             <div className="px-4 py-2">
               <Button
                 asChild
-                className="w-full bg-primary hover:bg-primary/90 text-primary-foreground rounded-full py-4 font-sans"
+                className="w-full bg-primary hover:bg-primary/90 text-primary-foreground rounded-full py-4"
               >
                 <a href="https://calendly.com/charlotte-drouilly" target="_blank" rel="noopener noreferrer">
                   <Phone className="w-4 h-4 mr-2" />

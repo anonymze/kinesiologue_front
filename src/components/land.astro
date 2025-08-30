@@ -1,265 +1,359 @@
 ---
-import { Image } from 'astro:assets'
-import forestImg from "@/assets/images/forest.webp"
+import CharlotteSunImg from "@/assets/images/charlotte-sun.webp";
+import forestImg from "@/assets/images/forest.webp";
+import WaterPeaceImg from "@/assets/images/water-peace.webp";
+import { Image } from "astro:assets";
 
 // Landing page data
 const services = [
-  {
-    icon: 'heart',
-    title: 'Kinésiologie Intuitive',
-    description: 'Une danse subtile avec votre corps pour révéler les messages cachés et restaurer l\'harmonie naturelle de votre être profond.'
-  },
-  {
-    icon: 'leaf',
-    title: 'Massage Sacré',
-    description: 'Des touches inspirées qui libèrent les mémoires du corps et invitent à une reconnexion profonde avec votre essence.'
-  },
-  {
-    icon: 'users',
-    title: 'Voyage Holistique',
-    description: 'Un accompagnement global qui honore tous les aspects de votre être pour une transformation authentique et durable.'
-  }
-]
+    {
+        icon: "heart",
+        title: "Kinésiologie Intuitive",
+        description:
+            "Une danse subtile avec votre corps pour révéler les messages cachés et restaurer l'harmonie naturelle de votre être profond.",
+    },
+    {
+        icon: "leaf",
+        title: "Massage Sacré",
+        description:
+            "Des touches inspirées qui libèrent les mémoires du corps et invitent à une reconnexion profonde avec votre essence.",
+    },
+    {
+        icon: "users",
+        title: "Voyage Holistique",
+        description:
+            "Un accompagnement global qui honore tous les aspects de votre être pour une transformation authentique et durable.",
+    },
+];
 
 const testimonials = [
-  {
-    text: "Charlotte a une approche magique et bienveillante. Ses séances m'ont reconnectée à ma force intérieure et à ma joie de vivre.",
-    author: "Sophie L."
-  },
-  {
-    text: "Grâce à la kinésiologie avec Charlotte, j'ai libéré des blocages anciens. Je me sens enfin aligné avec qui je suis vraiment.",
-    author: "Thomas M."
-  },
-  {
-    text: "Une thérapeute exceptionnelle qui crée un espace sacré de confiance. Ses massages sont de véritables voyages intérieurs.",
-    author: "Claire D."
-  }
-]
+    {
+        text: "Charlotte a une approche magique et bienveillante. Ses séances m'ont reconnectée à ma force intérieure et à ma joie de vivre.",
+        author: "Sophie L.",
+    },
+    {
+        text: "Grâce à la kinésiologie avec Charlotte, j'ai libéré des blocages anciens. Je me sens enfin aligné avec qui je suis vraiment.",
+        author: "Thomas M.",
+    },
+    {
+        text: "Une thérapeute exceptionnelle qui crée un espace sacré de confiance. Ses massages sont de véritables voyages intérieurs.",
+        author: "Claire D.",
+    },
+];
 ---
 
 <!-- Hero Section -->
-<section class="relative min-h-screen flex items-center justify-center overflow-hidden">
-  <div class="absolute inset-0 bg-gradient-to-br from-primary/30 via-secondary/20 to-accent/25"></div>
-  <Image
-    src={forestImg}
-    alt="Paysage montagneux paisible avec brume matinale"
-    width={1920}
-    height={1080}
-    class="absolute inset-0 w-full h-full object-cover"
-    loading="eager"
-  />
-  <div class="relative z-10 text-center max-w-6xl mx-auto px-8">
-    <h1 class="font-sans font-bold text-5xl md:text-7xl text-white mb-12 text-balance leading-tight tracking-wide drop-shadow-2xl">
-      Reconnectez-vous à<span class="block text-secondary/90 mt-4">votre essence naturelle</span>
-    </h1>
-    <p class="text-xl md:text-2xl text-white/95 mb-16 text-pretty max-w-4xl mx-auto leading-relaxed font-sans drop-shadow-lg">
-      Un voyage intérieur au cœur de la nature pour retrouver votre équilibre authentique
-    </p>
-    <a
-      href="https://calendly.com/charlotte-drouilly"
-      target="_blank"
-      rel="noopener noreferrer"
-      class="inline-flex items-center bg-primary hover:bg-primary/90 text-primary-foreground rounded-full px-14 py-6 text-lg shadow-2xl hover:shadow-3xl transition-all duration-700 hover:scale-110 font-sans"
+<section
+    class="relative hero-section flex items-center justify-center overflow-hidden"
+>
+    <div
+        class="absolute inset-0 bg-gradient-to-br from-primary/30 via-secondary/20 to-accent/25"
     >
-      <svg class="w-6 h-6 mr-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M7 20h10"></path>
-        <path d="M5 16h14"></path>
-        <path d="M15 9l-3 3-3-3"></path>
-        <path d="M12 2v10"></path>
-      </svg>
-      Commencer mon voyage intérieur
-    </a>
-  </div>
+    </div>
+    <Image
+        src={forestImg}
+        alt="Paysage montagneux paisible avec brume matinale"
+        width={1920}
+        height={1080}
+        class="absolute inset-0 w-full h-full object-cover"
+        loading="eager"
+    />
+    <div class="relative z-10 text-center max-w-6xl mx-auto px-8">
+        <h1
+            class="font-sans font-bold text-5xl md:text-7xl text-white mb-12 text-balance leading-tight tracking-wide drop-shadow-2xl"
+        >
+            Reconnectez-vous à<span
+                class="block text-secondary/90 text-shadow-black"
+                >votre essence naturelle</span
+            >
+        </h1>
+        <p
+            class="text-xl md:text-2xl text-white/95 mb-16 text-pretty max-w-4xl mx-auto leading-relaxed font-sans drop-shadow-lg"
+        >
+            Un voyage intérieur au cœur de vous même pour retrouver votre
+            équilibre authentique
+        </p>
+        <a
+            href="https://calendly.com/charlotte-drouilly"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center bg-primary hover:bg-primary/90 text-primary-foreground rounded-full px-14 py-6 text-lg shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-102"
+        >
+            <svg
+                class="w-6 h-6 mr-4"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+            >
+                <path d="M7 20h10"></path>
+                <path d="M5 16h14"></path>
+                <path d="M15 9l-3 3-3-3"></path>
+                <path d="M12 2v10"></path>
+            </svg>
+            Commencer mon voyage intérieur
+        </a>
+    </div>
 </section>
 
 <!-- About Preview -->
-<section class="py-40 bg-gradient-to-b from-background/60 to-card/30">
-  <div class="max-w-7xl mx-auto px-8 sm:px-12 lg:px-16">
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
-      <div class="space-y-12">
-        <h2 class="font-sans font-bold text-4xl md:text-5xl text-foreground leading-tight">
-          Un chemin vers
-          <span class="block text-primary mt-3">l'harmonie profonde</span>
-        </h2>
-        <div class="space-y-10 text-muted-foreground text-lg leading-relaxed font-sans">
-          <p>
-            Depuis mon enfance bercée entre deux cultures, j'ai développé une connexion profonde avec les énergies
-            subtiles qui nous entourent. Mes mains sont devenues mes guides les plus précieux dans cette danse
-            avec la vie.
-          </p>
-          <p>
-            Formée à travers le monde, j'ai puisé dans les sagesses ancestrales et les approches modernes pour
-            créer un accompagnement unique, où chaque séance devient un voyage vers votre véritable essence.
-          </p>
+<section class="py-24 bg-gradient-to-b from-background/60 to-card/30">
+    <div class="max-w-7xl mx-auto px-8 sm:px-12 lg:px-16">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
+            <div class="space-y-12">
+                <h2
+                    class="font-sans font-bold text-4xl md:text-5xl text-foreground leading-tight"
+                >
+                    Un chemin vers
+                    <span class="block text-primary mt-3"
+                        >l'harmonie profonde</span
+                    >
+                </h2>
+                <div
+                    class="space-y-10 text-muted-foreground text-lg leading-relaxed font-sans"
+                >
+                    <p>
+                        Depuis mon enfance bercée entre deux cultures, j'ai
+                        développé une connexion profonde avec les énergies
+                        subtiles qui nous entourent. Mes mains sont devenues mes
+                        guides les plus précieux dans cette danse avec la vie.
+                    </p>
+                    <p>
+                        Formée à travers le monde, j'ai puisé dans les sagesses
+                        ancestrales et les approches modernes pour créer un
+                        accompagnement unique, où chaque séance devient un
+                        voyage vers votre véritable essence.
+                    </p>
+                </div>
+                <a
+                    href="/a-propos"
+                    class="inline-flex items-center group bg-transparent border-2 border-primary/40 hover:border-primary hover:bg-primary/10 rounded-full px-8 py-4 text-lg"
+                >
+                    Découvrir mon univers
+                    <svg
+                        class="w-6 h-6 ml-4 group-hover:translate-x-3 transition-transform duration-300"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                    >
+                        <path d="M5 12h14"></path>
+                        <path d="m12 5 7 7-7 7"></path>
+                    </svg>
+                </a>
+            </div>
+            <div class="relative">
+                <div class="relative overflow-hidden shadow-2xl organic-shape">
+                    <Image
+                        src={CharlotteSunImg}
+                        alt="Charlotte Drouilly dans un cadre naturel"
+                        width={600}
+                        height={700}
+                        class="object-cover"
+                    />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent"
+                    >
+                    </div>
+                </div>
+            </div>
         </div>
-        <a
-          href="/a-propos"
-          class="inline-flex items-center group bg-transparent border-2 border-primary/40 hover:border-primary hover:bg-primary/10 rounded-full px-8 py-4 text-lg font-sans transition-all duration-300"
-        >
-          Découvrir mon univers
-          <svg class="w-6 h-6 ml-4 group-hover:translate-x-3 transition-transform duration-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M5 12h14"></path>
-            <path d="m12 5 7 7-7 7"></path>
-          </svg>
-        </a>
-      </div>
-      <div class="relative">
-        <div class="relative overflow-hidden rounded-lg shadow-2xl">
-          <Image
-            src="/kinesiologist-woman-in-natural-outdoor-setting-wit.png"
-            alt="Charlotte Drouilly dans un cadre naturel"
-            width={600}
-            height={700}
-            class="object-cover"
-          />
-          <div class="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent"></div>
-        </div>
-      </div>
     </div>
-  </div>
 </section>
 
 <!-- Services -->
-<section class="py-40 relative overflow-hidden">
-  <div class="absolute inset-0">
-    <Image
-      src="/serene-river-flowing-through-forest-with-golden-ho.png"
-      alt="Rivière paisible dans la forêt"
-      width={1920}
-      height={1080}
-      class="w-full h-full object-cover opacity-30"
-    />
-    <div class="absolute inset-0 bg-gradient-to-b from-background/80 to-card/60"></div>
-  </div>
-
-  <div class="relative max-w-7xl mx-auto px-8 sm:px-12 lg:px-16">
-    <div class="text-center mb-28">
-      <h2 class="font-sans font-bold text-4xl md:text-5xl text-foreground mb-12 leading-tight">
-        Mes accompagnements sacrés
-      </h2>
-      <p class="text-muted-foreground text-xl max-w-4xl mx-auto leading-relaxed font-sans">
-        Des approches intuitives et personnalisées pour révéler votre lumière intérieure
-      </p>
+<section class="py-24 relative overflow-hidden">
+    <div
+        class="absolute inset-0 bg-gradient-to-b from-background/80 to-card/60"
+    >
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
-      {services.map((service) => (
-        <article class="group hover:shadow-2xl transition-all duration-700 border border-border/20 rounded-2xl overflow-hidden hover:-translate-y-6 bg-card/60 backdrop-blur-lg">
-          <div class="p-16 text-center">
-            <div class="w-28 h-28 bg-gradient-to-br from-primary/40 to-secondary/30 rounded-full flex items-center justify-center mx-auto mb-12 group-hover:scale-125 transition-transform duration-500">
-              {service.icon === 'heart' && (
-                <svg class="w-14 h-14 text-primary" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M21 9c0-1.9-.6-3.7-1.6-5.2C18.4 2.3 16.7 1.5 15 1.5s-3.4.8-4.4 2.3c-1 1.5-1.6 3.3-1.6 5.2 0 0 0 6 6 13 6-7 6-13 6-13Z"></path>
-                  <path d="M12 5.5c-1.4-2.3-4-3.8-6.5-3.8C2.5 1.7 0 4.2 0 7.2c0 2.8 6 13.3 6 13.3s6-10.5 6-13.3c0-3-2.5-5.5-5.5-5.5Z"></path>
-                </svg>
-              )}
-              {service.icon === 'leaf' && (
-                <svg class="w-14 h-14 text-primary" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M7 20h10"></path>
-                  <path d="M5 16h14"></path>
-                  <path d="M15 9l-3 3-3-3"></path>
-                  <path d="M12 2v10"></path>
-                </svg>
-              )}
-              {service.icon === 'users' && (
-                <svg class="w-14 h-14 text-primary" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
-                  <circle cx="9" cy="7" r="4"></circle>
-                  <path d="m22 21-2-2"></path>
-                  <path d="M16 13h6"></path>
-                </svg>
-              )}
-            </div>
-            <h3 class="font-sans font-bold text-2xl text-foreground mb-10">{service.title}</h3>
-            <p class="text-muted-foreground leading-relaxed text-lg font-sans">
-              {service.description}
+    <div class="relative max-w-7xl mx-auto px-8 sm:px-12 lg:px-16">
+        <div class="text-center mb-14">
+            <h2
+                class="font-sans font-bold text-4xl md:text-5xl text-foreground mb-4 leading-tight"
+            >
+                Mes accompagnements sacrés
+            </h2>
+            <p
+                class="text-muted-foreground text-xl max-w-4xl mx-auto leading-relaxed font-sans"
+            >
+                Des approches intuitives et personnalisées pour révéler votre
+                lumière intérieure
             </p>
-          </div>
-        </article>
-      ))}
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+            {
+                services.map((service) => (
+                    <article class="group hover:shadow-2xl transition-all duration-300 border border-border/20 rounded-2xl overflow-hidden hover:-translate-y-6 bg-card/60 backdrop-blur-lg">
+                        <div class="p-16 text-center">
+                            <div class="w-28 h-28 bg-gradient-to-br from-primary/40 to-secondary/30 rounded-full flex items-center justify-center mx-auto mb-12 group-hover:scale-110 transition-transform duration-400 organic-shape">
+                                {service.icon === "heart" && (
+                                    <svg
+                                        class="w-14 h-14 text-primary"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="2"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                    >
+                                        <path d="M21 9c0-1.9-.6-3.7-1.6-5.2C18.4 2.3 16.7 1.5 15 1.5s-3.4.8-4.4 2.3c-1 1.5-1.6 3.3-1.6 5.2 0 0 0 6 6 13 6-7 6-13 6-13Z" />
+                                        <path d="M12 5.5c-1.4-2.3-4-3.8-6.5-3.8C2.5 1.7 0 4.2 0 7.2c0 2.8 6 13.3 6 13.3s6-10.5 6-13.3c0-3-2.5-5.5-5.5-5.5Z" />
+                                    </svg>
+                                )}
+                                {service.icon === "leaf" && (
+                                    <svg
+                                        class="w-14 h-14 text-primary"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="2"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                    >
+                                        <path d="M7 20h10" />
+                                        <path d="M5 16h14" />
+                                        <path d="M15 9l-3 3-3-3" />
+                                        <path d="M12 2v10" />
+                                    </svg>
+                                )}
+                                {service.icon === "users" && (
+                                    <svg
+                                        class="w-14 h-14 text-primary"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="2"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                    >
+                                        <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+                                        <circle cx="9" cy="7" r="4" />
+                                        <path d="m22 21-2-2" />
+                                        <path d="M16 13h6" />
+                                    </svg>
+                                )}
+                            </div>
+                            <h3 class="font-sans font-bold text-2xl text-foreground mb-10">
+                                {service.title}
+                            </h3>
+                            <p class="text-muted-foreground leading-relaxed text-lg font-sans">
+                                {service.description}
+                            </p>
+                        </div>
+                    </article>
+                ))
+            }
+        </div>
     </div>
-  </div>
 </section>
 
 <!-- Testimonials -->
-<section class="py-40 relative overflow-hidden">
-  <div class="absolute inset-0">
-    <Image
-      src="/peaceful-forest-path-with-dappled-sunlight-and-lus.png"
-      alt="Sentier forestier paisible"
-      width={1920}
-      height={1080}
-      class="w-full h-full object-cover opacity-25"
-    />
-    <div class="absolute inset-0 bg-gradient-to-b from-background/85 to-card/70"></div>
-  </div>
-
-  <div class="relative max-w-7xl mx-auto px-8 sm:px-12 lg:px-16">
-    <div class="text-center mb-28">
-      <h2 class="font-sans font-bold text-4xl md:text-5xl text-foreground mb-12">
-        Témoignages du cœur
-      </h2>
-      <p class="text-muted-foreground text-xl font-sans">
-        Les mots de ceux qui ont retrouvé leur chemin vers l'harmonie
-      </p>
+<section class="py-24 relative overflow-hidden">
+    <div
+        class="absolute inset-0 bg-gradient-to-b from-background/85 to-card/70"
+    >
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
-      {testimonials.map((testimonial) => (
-        <article class="border border-border/20 rounded-2xl hover:shadow-xl transition-all duration-500 bg-card/70 backdrop-blur-lg">
-          <div class="p-12">
-            <div class="flex items-center mb-10">
-              {[...Array(5)].map((_, i) => (
-                <svg class="w-6 h-6 fill-secondary text-secondary" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon>
-                </svg>
-              ))}
-            </div>
-            <p class="text-muted-foreground mb-10 leading-relaxed text-lg italic font-sans">
-              "{testimonial.text}"
+    <div class="relative max-w-7xl mx-auto px-8 sm:px-12 lg:px-16">
+        <div class="text-center mb-14">
+            <h2
+                class="font-sans font-bold text-4xl md:text-5xl text-foreground mb-6"
+            >
+                Témoignages du cœur
+            </h2>
+            <p class="text-muted-foreground text-xl font-sans">
+                Les mots de ceux qui ont retrouvé leur chemin vers l'harmonie
             </p>
-            <p class="font-medium text-foreground text-lg font-sans">{testimonial.author}</p>
-          </div>
-        </article>
-      ))}
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+            {
+                testimonials.map((testimonial) => (
+                    <article class="border border-border/20 rounded-2xl hover:shadow-xl duration-400 bg-card/70 backdrop-blur-lg">
+                        <div class="p-12">
+                            <p class="text-muted-foreground mb-10 leading-relaxed text-lg italic font-sans">
+                                "{testimonial.text}"
+                            </p>
+                            <p class="font-medium text-foreground text-lg font-sans">
+                                {testimonial.author}
+                            </p>
+                        </div>
+                    </article>
+                ))
+            }
+        </div>
     </div>
-  </div>
 </section>
 
 <!-- CTA Section -->
-<section class="py-40 relative overflow-hidden">
-  <div class="absolute inset-0">
-    <Image
-      src="/peaceful-mountain-lake-reflection-with-soft-mornin.png"
-      alt="Lac de montagne paisible"
-      width={1920}
-      height={1080}
-      class="w-full h-full object-cover"
-    />
-    <div class="absolute inset-0 bg-gradient-to-br from-primary/80 to-secondary/70"></div>
-  </div>
+<section class="py-24 relative overflow-hidden">
+    <div class="absolute inset-0">
+        <Image
+            src={WaterPeaceImg}
+            alt="Sentier forestier paisible"
+            width={1920}
+            height={1080}
+            class="w-full h-full object-cover opacity-90"
+        />
+        <!-- <div
+            class="absolute inset-0 bg-gradient-to-b from-background/85 to-card/70"
+        >
+        </div> -->
+    </div>
 
-  <div class="relative max-w-6xl mx-auto text-center px-8 sm:px-12 lg:px-16">
-    <h2 class="font-sans font-bold text-4xl md:text-5xl mb-12 leading-tight text-primary-foreground">
-      Prêt(e) à embrasser votre
-      <span class="block mt-4">transformation naturelle ?</span>
-    </h2>
-    <p class="text-xl md:text-2xl mb-16 text-primary-foreground/95 max-w-4xl mx-auto leading-relaxed font-sans">
-      Offrez-vous ce cadeau précieux et découvrez le chemin vers votre essence authentique
-    </p>
-    <a
-      href="https://calendly.com/charlotte-drouilly"
-      target="_blank"
-      rel="noopener noreferrer"
-      class="inline-flex items-center bg-white text-primary hover:bg-white/95 rounded-full px-14 py-6 text-lg shadow-2xl hover:shadow-3xl transition-all duration-700 hover:scale-110 font-sans"
-    >
-      <svg class="w-6 h-6 mr-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M7 20h10"></path>
-        <path d="M5 16h14"></path>
-        <path d="M15 9l-3 3-3-3"></path>
-        <path d="M12 2v10"></path>
-      </svg>
-      Réserver mon moment sacré
-    </a>
-  </div>
+    <div class="relative max-w-6xl mx-auto text-center px-8 sm:px-12 lg:px-16">
+        <h2
+            class="font-sans font-bold text-4xl md:text-5xl mb-12 leading-tight text-primary-foreground"
+        >
+            Prêt(e) à embrasser votre
+            <span class="block mt-4">transformation naturelle ?</span>
+        </h2>
+        <p
+            class="text-xl md:text-2xl mb-16 text-primary-foreground/95 max-w-4xl mx-auto leading-relaxed font-sans"
+        >
+            Offrez-vous ce cadeau précieux et découvrez le chemin vers votre
+            essence authentique
+        </p>
+        <a
+            href="https://calendly.com/charlotte-drouilly"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center bg-primary hover:bg-primary/90 text-primary-foreground rounded-full px-14 py-6 text-lg shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-102"
+        >
+            <svg
+                class="w-6 h-6 mr-4"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+            >
+                <path d="M7 20h10"></path>
+                <path d="M5 16h14"></path>
+                <path d="M15 9l-3 3-3-3"></path>
+                <path d="M12 2v10"></path>
+            </svg>
+            Réserver un moment sacré
+        </a>
+    </div>
 </section>
+
+<style>
+    .hero-section {
+        min-height: calc(100vh - 5rem);
+    }
+</style>

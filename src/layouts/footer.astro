@@ -41,7 +41,7 @@ const navItems = [
     class="bg-gradient-to-b from-card/50 to-card/70 border-t border-border/20 backdrop-blur-lg"
     role="contentinfo"
 >
-    <div class="max-w-7xl mx-auto px-8 sm:px-12 lg:px-16 py-24">
+    <div class="max-w-7xl mx-auto px-6 sm:px-10 lg:px-14 pt-12 pb-8">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-20">
             <!-- Contact Information Section -->
             <section class="space-y-10" aria-labelledby="contact-heading">
@@ -56,10 +56,10 @@ const navItems = [
                         class="flex items-center space-x-6 text-muted-foreground text-lg font-sans"
                     >
                         <div
-                            class="w-14 h-14 rounded-full flex items-center justify-center"
+                            class="w-14 h-14 flex items-center justify-center bg-secondary organic-shape"
                             aria-hidden="true"
                         >
-                            <Phone className="w-6 h-6 text-primary" />
+                            <Phone className="w-6 h-6 text-white" />
                         </div>
                         <a
                             href={`tel:${businessInfo.phone}`}
@@ -75,10 +75,10 @@ const navItems = [
                         class="flex items-center space-x-6 text-muted-foreground text-lg font-sans"
                     >
                         <div
-                            class="w-14 h-14 rounded-full flex items-center justify-center"
+                            class="w-14 h-14 flex items-center justify-center bg-secondary organic-shape"
                             aria-hidden="true"
                         >
-                            <Mail className="w-6 h-6 text-primary" />
+                            <Mail className="w-6 h-6 text-white" />
                         </div>
                         <a
                             href={`mailto:${businessInfo.email}`}
@@ -94,10 +94,10 @@ const navItems = [
                         class="flex items-center space-x-6 text-muted-foreground text-lg font-sans"
                     >
                         <div
-                            class="w-14 h-14 rounded-full flex items-center justify-center"
+                            class="w-14 h-14 flex items-center justify-center bg-secondary organic-shape"
                             aria-hidden="true"
                         >
-                            <MapPin className="w-6 h-6 text-primary" />
+                            <MapPin className="w-6 h-6 text-white" />
                         </div>
                         <span
                             itemprop="address"
@@ -170,7 +170,7 @@ const navItems = [
         </div>
 
         <!-- Copyright Section -->
-        <div class="border-t border-border/20 mt-20 pt-12 text-center">
+        <div class="border-t border-border/20 mt-10 pt-8 text-center">
             <p class="text-muted-foreground text-lg font-sans">
                 © <time datetime="2025">2025</time>
                 <span itemprop="name">{businessInfo.name}</span> -
