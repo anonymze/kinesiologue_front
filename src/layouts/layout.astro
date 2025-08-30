@@ -1,6 +1,7 @@
 ---
+import Footer from "@/layouts/footer.astro";
+import Navigation from "@/layouts/navigation.astro";
 import "../styles/global.css";
-import Footer from "@/layouts/footer.astro"
 ---
 
 <html lang="fr">
@@ -14,6 +15,7 @@ import Footer from "@/layouts/footer.astro"
     </head>
     <body>
         <div class="min-h-screen stone-texture">
+            <Navigation />
             <slot />
             <Footer />
         </div>
