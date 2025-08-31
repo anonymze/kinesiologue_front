@@ -131,7 +131,7 @@ const businessInfo = {
 
                 <!-- Menu mobile -->
                 <div class="md:hidden relative">
-                    <MobileMenuToggle client:load navItems={navItems.map(item => ({ href: item.href, label: item.label }))} />
+                    <MobileMenuToggle client:visible navItems={navItems.map(item => ({ href: item.href, label: item.label }))} />
                 </div>
             </div>
         </div>
