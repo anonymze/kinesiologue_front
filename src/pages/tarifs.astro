@@ -10,12 +10,13 @@ const pageData = {
         "tarifs kinésiologie Suisse, prix séance kinésiologie Genève, forfait massage thérapeutique, consultation kinésiologue prix Charlotte Drouilly",
 };
 
-// Services with Swiss pricing
+// Services with dual pricing
 const services = [
     {
         title: "Séance de Kinésiologie",
         duration: "1h30",
-        price: "120 CHF",
+        priceFrance: "90 €",
+        priceSuisse: "120 CHF",
         description:
             "Séance complète incluant bilan énergétique et rééquilibrage",
         features: [
@@ -29,7 +30,8 @@ const services = [
     {
         title: "Massage Bien-être",
         duration: "1h",
-        price: "100 CHF",
+        priceFrance: "75 €",
+        priceSuisse: "100 CHF",
         description: "Massage relaxant personnalisé selon vos besoins",
         features: [
             "Choix de la technique adaptée",
@@ -42,7 +44,8 @@ const services = [
     {
         title: "Accompagnement Holistique",
         duration: "2h",
-        price: "180 CHF",
+        priceFrance: "135 €",
+        priceSuisse: "180 CHF",
         description:
             "Séance combinée kinésiologie et massage pour un bien-être global",
         features: [
@@ -131,6 +134,39 @@ const cancellationInfo = [
                         besoins et votre budget
                     </p>
                 </header>
+
+                <!-- Important Notice -->
+                <div class="max-w-3xl mx-auto">
+                    <div class="bg-amber-50 border border-amber-200 rounded-2xl p-6 mb-8">
+                        <div class="flex items-start space-x-3 text-center">
+                            <svg
+                                class="w-6 h-6 text-amber-600 flex-shrink-0 mt-0.5"
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                aria-hidden="true"
+                            >
+                                <path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/>
+                                <path d="M12 9v4"/>
+                                <path d="M12 17h.01"/>
+                            </svg>
+                            <div>
+                                <h3 class="font-semibold text-amber-800 mb-2">
+                                    Information importante
+                                </h3>
+                                <p class="text-amber-700 text-sm leading-relaxed">
+                                    <strong>Attention :</strong> Les mutuelles françaises ne prennent pas en charge
+                                    les consultations effectuées dans un cabinet situé en Suisse.
+                                    Pour un remboursement mutuelle, privilégiez le cabinet français.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8" role="list">
                     {
@@ -225,11 +261,19 @@ const cancellationInfo = [
                                                 {service.duration}
                                             </span>
                                         </div>
-                                        <div
-                                            class="text-2xl font-bold text-primary"
-                                            itemprop="price"
-                                        >
-                                            {service.price}
+                                        <div class="text-center">
+                                            <div class="flex items-center justify-center space-x-3 mb-2">
+                                                <div class="text-lg font-bold text-primary flex items-center">
+                                                    🇫🇷 {service.priceFrance}
+                                                </div>
+                                                <div class="w-px h-6 bg-border"></div>
+                                                <div class="text-lg font-bold text-primary flex items-center">
+                                                    🇨🇭 {service.priceSuisse}
+                                                </div>
+                                            </div>
+                                            <div class="text-xs text-muted-foreground">
+                                                France • Suisse
+                                            </div>
                                         </div>
                                     </div>
 
