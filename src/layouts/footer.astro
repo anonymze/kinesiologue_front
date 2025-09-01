@@ -34,6 +34,11 @@ const navItems = [
         label: "Contact",
         title: "Prendre contact avec Charlotte",
     },
+    {
+        href: "/reservation",
+        label: "Rendez-vous",
+        title: "Prendre rendez-vous en ligne pour une consultation en kinésiologie",
+    },
 ];
 ---
 
@@ -136,7 +141,7 @@ const navItems = [
                                 <a
                                     href={item.href}
                                     title={item.title}
-                                    class="block text-muted-foreground hover:text-primary transition-all duration-300 text-lg hover:translate-x-3 py-1.5 font-sans focus:outline-none focus:ring-2 focus:ring-primary focus:ring-opacity-50"
+                                    class="block text-muted-foreground hover:text-primary transition-all duration-300 text-lg hover:translate-x-3 py-0.5 font-sans focus:outline-none focus:ring-2 focus:ring-primary focus:ring-opacity-50"
                                 >
                                     {item.label}
                                 </a>

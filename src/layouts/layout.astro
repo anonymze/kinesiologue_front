@@ -2,6 +2,20 @@
 import Footer from "@/layouts/footer.astro";
 import Navigation from "@/layouts/navigation.astro";
 import "../styles/global.css";
+
+export interface Props {
+    title: string;
+    description: string;
+    keywords: string;
+    type?: string;
+}
+
+const {
+    title,
+    description,
+    keywords,
+    type = "website"
+} = Astro.props;
 ---
 
 <html lang="fr">
@@ -10,22 +24,10 @@ import "../styles/global.css";
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="generator" content={Astro.generator} />
 
-        <title>
-            Charlotte Drouilly - Kinésiologue en Suisse | Séances de
-            Kinésiologie & Massage Sacré
-        </title>
-        <meta
-            name="title"
-            content="Charlotte Drouilly - Kinésiologue en Suisse | Séances de Kinésiologie & Massage Sacré"
-        />
-        <meta
-            name="description"
-            content="Charlotte Drouilly, kinésiologue expérimentée en Suisse. Séances de kinésiologie intuitive, massage sacré et accompagnement holistique pour retrouver votre harmonie intérieure. Consultation sur rendez-vous."
-        />
-        <meta
-            name="keywords"
-            content="kinésiologue Suisse, kinésiologie Genève, massage sacré, thérapie holistique, bien-être, équilibre énergétique, Charlotte Drouilly, séance kinésiologie Suisse romande"
-        />
+        <title>Charlotte Drouilly - Kinésiologue | {title}</title>
+        <meta name="title" content={`Charlotte Drouilly - Kinésiologue | ${title}`} />
+        <meta name="description" content={description} />
+        <meta name="keywords" content={keywords} />
         <meta name="author" content="Charlotte Drouilly" />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://kinesiologue-charlotte.ch" />
@@ -37,16 +39,10 @@ import "../styles/global.css";
         <meta name="ICBM" content="46.2044, 6.1432" />
 
         <!-- Open Graph / Facebook -->
-        <meta property="og:type" content="website" />
+        <meta property="og:type" content={type} />
         <meta property="og:url" content="https://kinesiologue-charlotte.ch" />
-        <meta
-            property="og:title"
-            content="Charlotte Drouilly - Kinésiologue en Suisse | Harmonie & Bien-être"
-        />
-        <meta
-            property="og:description"
-            content="Découvrez la kinésiologie avec Charlotte Drouilly en Suisse. Séances personnalisées de kinésiologie intuitive et massage sacré pour retrouver votre équilibre naturel."
-        />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
         <meta
             property="og:image"
             content="https://kinesiologue-charlotte.ch/og.png"
@@ -72,8 +68,8 @@ import "../styles/global.css";
         />
     </head>
     <body>
+        <Navigation />
         <div class="min-h-screen stone-texture">
-            <Navigation />
             <slot />
             <Footer />
         </div>

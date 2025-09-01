@@ -1,5 +1,5 @@
 import React from "react"
-import { Menu, X, Phone } from "lucide-react"
+import { Menu, X, Phone, Calendar1Icon } from "lucide-react"
 
 interface NavItem {
   href: string
@@ -57,7 +57,7 @@ export default function MobileMenuToggle({ navItems }: MobileMenuToggleProps) {
 
       {/* Mobile Navigation */}
       {isOpen && (
-        <div 
+        <div
           id="mobile-menu"
           className="absolute top-full left-0 right-0 md:hidden z-50"
           role="menu"
@@ -77,14 +77,12 @@ export default function MobileMenuToggle({ navItems }: MobileMenuToggleProps) {
               </a>
             ))}
             <div className="px-4 py-2">
-              <a 
-                href="https://calendly.com/charlotte-drouilly" 
-                target="_blank" 
-                rel="noopener noreferrer"
+              <a
+                href="/reservation"
                 className="flex items-center justify-center w-full bg-primary hover:bg-primary/90 text-primary-foreground rounded-full py-4 font-medium transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
                 onClick={() => setIsOpen(false)}
               >
-                <Phone className="w-4 h-4 mr-2" />
+                <Calendar1Icon className="w-4 h-4 mr-2" />
                 Réserver
               </a>
             </div>

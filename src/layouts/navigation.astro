@@ -2,6 +2,8 @@
 import MobileMenuToggle from "@/components/mobile-menu-toggle.tsx";
 import LogoImg from "@/assets/images/logo.png";
 import { Image } from "astro:assets";
+import { businessInfo } from "@/utils/helper";
+import { Calendar1Icon } from "lucide-react";
 
 // SEO-optimized navigation items with descriptive titles
 const navItems = [
@@ -30,13 +32,6 @@ const navItems = [
         description: "Contactez Charlotte Drouilly pour prendre rendez-vous ou obtenir des informations sur les séances de kinésiologie"
     },
 ];
-
-const businessInfo = {
-    name: "Charlotte Drouilly",
-    profession: "Kinésiologue",
-    location: "Genève, Suisse",
-    phone: "+41 22 123 45 67"
-};
 ---
 
 <header role="banner">
@@ -103,26 +98,12 @@ const businessInfo = {
                         <!-- Bouton de réservation -->
                         <li>
                             <a
-                                href="https://calendly.com/charlotte-drouilly"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                class="inline-flex items-center bg-primary hover:bg-primary/90 text-primary-foreground rounded-full px-6 py-3 shadow-lg hover:shadow-xl transition-all duration-300 font-sans hover:scale-105 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
+                                href="/reservation"
+                                class="inline-flex items-center bg-primary hover:bg-primary/90 text-primary-foreground rounded-full px-6 py-3 shadow-lg hover:shadow-xl transition-all duration-300 font-sans hover:scale-102 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
                                 title="Prendre rendez-vous en ligne avec Charlotte Drouilly pour une séance de kinésiologie"
                                 aria-label="Réserver une consultation en kinésiologie avec Charlotte Drouilly"
                             >
-                                <svg
-                                    class="w-4 h-4 mr-2"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 24 24"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    stroke-width="2"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    aria-hidden="true"
-                                >
-                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-                                </svg>
+                                <Calendar1Icon width={20} height={20} className="mr-2" />
                                 Réserver
                             </a>
                         </li>
@@ -137,24 +118,3 @@ const businessInfo = {
         </div>
     </nav>
 </header>
-
-<!-- Fil d'Ariane (breadcrumb) pour les pages internes -->
-{Astro.url.pathname !== '/' && (
-    <nav aria-label="Fil d'Ariane" class="bg-muted/30 border-b border-border/10">
-        <div class="max-w-6xl mx-auto px-6 sm:px-8 lg:px-12 py-3">
-            <ol class="flex items-center space-x-2 text-sm text-muted-foreground">
-                <li>
-                    <a href="/" class="hover:text-primary transition-colors duration-300">
-                        Accueil
-                    </a>
-                </li>
-                <li aria-hidden="true">/</li>
-                <li>
-                    <span class="text-foreground font-medium" aria-current="page">
-                        {navItems.find(item => item.href === Astro.url.pathname)?.label || 'Page actuelle'}
-                    </span>
-                </li>
-            </ol>
-        </div>
-    </nav>
-)}
