@@ -69,13 +69,13 @@ const cabinetLocations = [
         <!-- Hero Section -->
         <section
             class="pt-24 bg-gradient-to-b from-card/60 to-background/30"
-            aria-labelledby="hero-heading"
+            aria-labelledby="contact-hero-heading"
             role="banner"
         >
             <div class="max-w-7xl mx-auto px-8 sm:px-12 lg:px-16">
                 <header class="text-center mb-12">
                     <h1
-                        id="hero-heading"
+                        id="contact-hero-heading"
                         class="font-sans font-bold text-4xl md:text-5xl text-foreground mb-6 leading-tight"
                     >
                         Contactez-moi
@@ -99,13 +99,11 @@ const cabinetLocations = [
 
                 <div
                     class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8"
-                    role="list"
                 >
                     {
                         contactInfo.map((info, index) => (
                             <article
                                 class="border border-border/20 rounded-3xl bg-card/60 backdrop-blur-lg"
-                                role="listitem"
                             >
                                 <div class="p-6">
                                     <div class="flex items-start space-x-4">
@@ -189,7 +187,7 @@ const cabinetLocations = [
                                             )}
                                         </div>
                                         <div>
-                                            <h3 class="font-medium text-foreground mb-1 flex items-center">
+                                            <div class="font-medium text-foreground mb-1 flex items-center">
                                                 {info.title}
                                                 {info.flagEmoji && (
                                                     <span
@@ -199,7 +197,7 @@ const cabinetLocations = [
                                                         {info.flagEmoji}
                                                     </span>
                                                 )}
-                                            </h3>
+                                            </div>
                                             <p class="text-muted-foreground">
                                                 {info.value}
                                             </p>

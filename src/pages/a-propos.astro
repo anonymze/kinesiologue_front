@@ -35,7 +35,7 @@ const qualifications = [
         <!-- Hero Section -->
         <section
             class="py-24 bg-gradient-to-b from-card/60 to-background/30"
-            aria-labelledby="hero-heading"
+            aria-labelledby="about-hero-heading"
             role="banner"
         >
             <div class="max-w-7xl mx-auto px-8 sm:px-12 lg:px-16">
@@ -45,7 +45,7 @@ const qualifications = [
                     <article class="space-y-10">
                         <header>
                             <h1
-                                id="hero-heading"
+                                id="about-hero-heading"
                                 class="font-sans font-bold text-4xl md:text-5xl text-foreground leading-tight"
                             >
                                 Mon voyage vers
@@ -149,12 +149,11 @@ const qualifications = [
                     </h2>
                 </header>
 
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-10" role="list">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
                     {
                         qualifications.map((qualification, index) => (
                             <article
                                 class="border border-border/20 rounded-3xl hover:shadow-2xl transition-all duration-700 hover:-translate-y-4 bg-card/70 backdrop-blur-lg"
-                                role="listitem"
                                 itemscope
                                 itemtype="https://schema.org/EducationalCredential"
                             >

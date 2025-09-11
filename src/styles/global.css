@@ -44,22 +44,22 @@
 :root {
     /* Updated to wild nature immersion color palette */
     --background: #fefce8; /* Soft beige as the base background */
-    --foreground: #4b5563; /* Dark slate for text */
+    --foreground: #454d58; /* Dark slate for text */
     --card: #ffffff; /* Pure white for card backgrounds */
-    --card-foreground: #4b5563; /* Dark slate for card text */
+    --card-foreground: #454d58; /* Dark slate for card text */
     --popover: #ffffff; /* White for popover elements */
-    --popover-foreground: #4b5563; /* Dark slate for popover text */
-    --primary: #E2B8B0; /* Earthy yellow for primary actions */
+    --popover-foreground: #454d58; /* Dark slate for popover text */
+    --primary: #d2aca6; /* Earthy yellow for primary actions */
     --primary-foreground: #ffffff; /* White text on primary buttons */
-    --secondary: #A6C0B2; /* Cyan for secondary actions */
+    --secondary: #8ea699; /* Cyan for secondary actions */
     --secondary-foreground: #ffffff; /* White text on secondary buttons */
     --muted: #fefce8; /* Soft beige for muted elements */
-    --muted-foreground: #4b5563; /* Dark slate for muted text */
+    --muted-foreground: #454d58; /* Dark slate for muted text */
     --accent: #0891b2; /* Cyan for highlights */
     --accent-foreground: #ffffff; /* White text on accent elements */
     --destructive: #dc2626; /* Red for destructive actions */
     --destructive-foreground: #ffffff; /* White text on destructive actions */
-    --border: #4b5563; /* Dark slate for borders */
+    --border: #454d58; /* Dark slate for borders */
     --input: #ffffff; /* White for input fields */
     --ring: #a16207; /* Earthy yellow for focus rings */
     --chart-1: #0891b2;
