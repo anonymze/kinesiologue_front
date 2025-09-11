@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://kinesiologue-charlotte.ch/sitemap-index.xml
+
+# Block common bot paths (optional security)
+Disallow: /api/
+Disallow: /_astro/
+Disallow: /admin/
