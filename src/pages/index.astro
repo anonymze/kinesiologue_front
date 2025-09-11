@@ -1,6 +1,7 @@
 ---
 import CharlotteSunImg from "@/assets/images/charlotte-sun.webp";
 import forestImg from "@/assets/images/forest.webp";
+import LogoImg from "@/assets/images/logo_blanc.webp";
 import WaterPeaceImg from "@/assets/images/water-peace.webp";
 import Layout from "@/layouts/layout.astro";
 import { businessInfo } from "@/utils/helper";
@@ -97,16 +98,23 @@ const testimonials = [
                     class="text-xl md:text-2xl text-white/95 mb-16 text-pretty max-w-4xl mx-auto leading-relaxed text-shadow-md"
                 >
                     Un voyage intérieur avec <strong>{businessInfo.name}</strong
-                    >, kinésiologue expérimentée en Suisse, pour
-                    retrouver votre équilibre authentique
+                    >, kinésiologue expérimentée en Suisse, pour retrouver votre
+                    équilibre authentique
                 </p>
 
                 <a
                     href="/reservation"
-                    class="inline-flex items-center bg-primary hover:bg-primary/90 text-primary-foreground rounded-full px-14 py-6 text-lg shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-102 font-sans focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2"
+                    class="inline-flex gap-3 items-center bg-primary hover:bg-primary/90 text-primary-foreground rounded-full px-14 py-6 text-lg shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-102 font-sans focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2"
                     title="Réserver une consultation en kinésiologie avec Charlotte Drouilly à Genève"
                     aria-label="Prendre rendez-vous pour une séance de kinésiologie avec Charlotte Drouilly via Calendly"
                 >
+                    <Image
+                        src={LogoImg}
+                        width={40}
+                        height={40}
+                        alt={""}
+                        loading="eager"
+                    />
                     Commencer mon voyage intérieur
                 </a>
             </div>
@@ -335,9 +343,8 @@ const testimonials = [
                         Témoignages clients authentiques
                     </h2>
                     <p class="text-muted-foreground text-xl font-sans">
-                        Les retours de mes clients en <strong
-                            >Suisse</strong
-                        > qui ont retrouvé leur chemin vers l'harmonie
+                        Les retours de mes clients en <strong>Suisse</strong> qui
+                        ont retrouvé leur chemin vers l'harmonie
                     </p>
                 </header>
 
