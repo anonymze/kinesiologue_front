@@ -21,7 +21,7 @@ const services = [
         title: "Détoxination énergétique",
         description:
             "Technique de nettoyage du corps afin d'éliminer les polluants et substances qui intoxiquent notre corps",
-        keywords: "Poils d'animaux, Perturbateurs endocriniens, Hormones...)",
+        keywords: "Poils d'animaux, Perturbateurs endocriniens, Hormones...",
     },
     {
         icon: "users",
@@ -41,22 +41,19 @@ const services = [
 // Testimonials with client consent and authenticity
 const testimonials = [
     {
-        text: "Charlotte a une approche magique et bienveillante. Ses séances m'ont reconnectée à ma force intérieure et à ma joie de vivre.",
-        author: "Sophie L.",
-        location: "Genève",
-        service: "Kinésiologie Intuitive",
+        text: "J'ai consultée Charlotte récemment et j’ai vraiment adoré l’expérience. Elle est douce, à l’écoute et prend le temps de comprendre mes besoins. Je me suis sentie tout de suite à l’aise et ses séances m’ont fais un bien fou. Merci encore Charlotte, je reviendrai sans hésiter ! ✨",
+        author: "Caroline M.",
+        service: "Kinésiologie",
     },
     {
-        text: "Grâce à la kinésiologie avec Charlotte, j'ai libéré des blocages anciens. Je me sens enfin aligné avec qui je suis vraiment.",
-        author: "Thomas M.",
-        location: "Lausanne",
-        service: "Accompagnement Holistique",
+        text: "Charlotte a reçu ma fille de 10 ans pour une séance de kinesiologie. Elle est ressortie pleine d'énergie avec des petites solutions pour différentes situations compliquées. Ses explications étaient claires et adaptées, je recommande vivement.",
+        author: "Julie G.",
+        service: "Kinésiologie",
     },
     {
-        text: "Une thérapeute exceptionnelle qui crée un espace sacré de confiance. Ses massages sont de véritables voyages intérieurs.",
-        author: "Claire D.",
-        location: "Nyon",
-        service: "Massage Sacré",
+        text: "La séance avec Charlotte a démarré par un accueil chaleureux. Elle a su m'apporter des clefs de compréhension et le soutien dont j'avais besoin en faisant preuve d'une écoute bienveillante. Charlotte pratique la kinésiologie avec douceur et précision. Je recommande totalement !",
+        author: "Joséphine C.",
+        service: "Kinésiologie",
     },
 ];
 ---
@@ -352,7 +349,7 @@ const testimonials = [
                                 itemscope
                                 itemtype="https://schema.org/Review"
                             >
-                                <div class="p-12">
+                                <div class="p-12 flex flex-col h-full">
                                     <blockquote
                                         class="text-muted-foreground mb-10 leading-relaxed text-lg italic font-sans"
                                         itemprop="reviewBody"
@@ -360,7 +357,7 @@ const testimonials = [
                                         "{testimonial.text}"
                                     </blockquote>
 
-                                    <footer class="space-y-2">
+                                    <footer class="space-y-2 mt-auto">
                                         <cite
                                             class="font-medium text-foreground text-lg font-sans not-italic"
                                             itemprop="author"
@@ -368,9 +365,6 @@ const testimonials = [
                                             {testimonial.author}
                                         </cite>
                                         <div class="text-sm text-muted-foreground">
-                                            <span itemprop="addressLocality">
-                                                {testimonial.location}
-                                            </span>{" "}
                                             •
                                             <span itemprop="itemReviewed">
                                                 {testimonial.service}
