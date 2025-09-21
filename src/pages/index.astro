@@ -334,11 +334,11 @@ const testimonials = [
                         id="testimonials-heading"
                         class="font-sans font-bold text-4xl md:text-5xl text-foreground mb-6"
                     >
-                        Témoignages clients authentiques
+                        Témoignages authentiques de mes clients
                     </h2>
                     <p class="text-muted-foreground text-xl font-sans">
-                        Les retours de mes clients en <strong>Suisse</strong> qui
-                        ont retrouvé leur chemin vers l'harmonie
+                        Les retours des personnes qui ont retrouvé leur chemin
+                        vers <strong>l'harmonie</strong>.
                     </p>
                 </header>
 
@@ -409,27 +409,31 @@ const testimonials = [
                     id="cta-heading"
                     class="font-sans font-bold text-4xl md:text-5xl mb-12 leading-tight text-primary-foreground"
                 >
-                    Prêt(e) à débuter votre
-                    <span class="block mt-4">transformation personnelle ?</span>
+                    Prêt à débuter votre voyage intérieur vers vous-même ?
                 </h2>
 
                 <p
                     class="text-xl md:text-2xl mb-16 text-primary-foreground/95 max-w-4xl mx-auto leading-relaxed font-sans"
                 >
-                    Offrez-vous ce <strong>cadeau précieux</strong> avec {
-                        businessInfo.name
-                    } et découvrez le chemin vers votre essence authentique en <strong
-                        >kinésiologie</strong
-                    >
+                    Offrez-vous ce <strong>cadeau précieux</strong> avec Charlotte
+                    Drouilly et découvrez le chemin vers votre essence intérieur
+                    en kinésiologie.
                 </p>
 
                 <a
                     href="/reservation"
-                    class="inline-flex items-center bg-primary hover:bg-primary/90 text-primary-foreground rounded-full px-14 py-6 text-lg shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-102 font-sans focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2"
+                    class="inline-flex gap-4 items-center bg-primary hover:bg-primary/90 text-primary-foreground rounded-full px-14 py-6 text-lg shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-102 font-sans focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2"
                     title="Réserver immédiatement une séance de kinésiologie avec Charlotte Drouilly à Genève"
                     aria-label="Prendre rendez-vous en ligne pour une consultation en kinésiologie à Genève"
                 >
-                    Réserver un moment sacré
+                    <Image
+                        src={LogoImg}
+                        width={40}
+                        height={40}
+                        alt={""}
+                        loading="lazy"
+                    />
+                    Réserver mon moment sacré
                 </a>
             </div>
         </section>

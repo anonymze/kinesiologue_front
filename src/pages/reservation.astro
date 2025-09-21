@@ -4,8 +4,10 @@ import Layout from "@/layouts/layout.astro";
 // Page SEO data
 const pageData = {
     title: "Réservation",
-    description: "Réservez facilement votre séance de kinésiologie avec Charlotte Drouilly. Prise de rendez-vous en ligne 24h/24.",
-    keywords: "réservation kinésiologie, rendez-vous Charlotte Drouilly, séance kinésiologie France Suisse, prise rendez-vous en ligne"
+    description:
+        "Réservez facilement votre séance de kinésiologie avec Charlotte Drouilly. Prise de rendez-vous en ligne 24h/24.",
+    keywords:
+        "réservation kinésiologie, rendez-vous Charlotte Drouilly, séance kinésiologie France Suisse, prise rendez-vous en ligne",
 };
 ---
 
@@ -30,15 +32,19 @@ const pageData = {
                     >
                         Réservez votre séance
                     </h1>
-                    <p class="text-muted-foreground text-xl max-w-3xl mx-auto leading-relaxed">
+                    <p
+                        class="text-muted-foreground text-xl max-w-3xl mx-auto leading-relaxed"
+                    >
                         Prenez rendez-vous facilement en ligne pour votre
                         <strong>séance de kinésiologie</strong>
                     </p>
                 </header>
 
                 <!-- Important Notice -->
-                <div class="max-w-3xl mx-auto">
-                    <div class="bg-amber-50 border border-amber-200 rounded-2xl p-6 mb-8">
+                <div class="max-w-4xl mx-auto">
+                    <div
+                        class="bg-amber-50 border border-amber-200 rounded-2xl p-6 mb-8"
+                    >
                         <div class="flex items-start space-x-3">
                             <svg
                                 class="w-6 h-6 text-amber-600 flex-shrink-0 mt-0.5"
@@ -51,18 +57,24 @@ const pageData = {
                                 stroke-linejoin="round"
                                 aria-hidden="true"
                             >
-                                <path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/>
-                                <path d="M12 9v4"/>
-                                <path d="M12 17h.01"/>
+                                <path
+                                    d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"
+                                ></path>
+                                <path d="M12 9v4"></path>
+                                <path d="M12 17h.01"></path>
                             </svg>
                             <div>
                                 <h2 class="font-semibold text-amber-800 mb-2">
                                     Information importante
                                 </h2>
-                                <p class="text-amber-700 text-sm leading-relaxed">
-                                    <strong>Attention :</strong> Les mutuelles françaises ne prennent pas en charge
-                                    les consultations effectuées dans un cabinet situé en Suisse.
-                                    Pour un remboursement mutuelle, privilégiez le cabinet français.
+                                <p
+                                    class="text-amber-700 text-sm leading-relaxed"
+                                >
+                                    <strong>Remboursement :</strong> Pas encore membre
+                                    des réseaux ASCA / RME. <br />
+                                    Les mutuelles françaises ne prennent pas en charge
+                                    mes consultations, que vous soyez frontalier
+                                    ou résident en France.
                                 </p>
                             </div>
                         </div>
@@ -74,7 +86,9 @@ const pageData = {
         <!-- Calendly Section -->
         <section class="pb-20">
             <div class="max-w-5xl mx-auto px-8 sm:px-12 lg:px-16">
-                <div class="border border-border/20 rounded-3xl bg-card/60 backdrop-blur-lg overflow-hidden">
+                <div
+                    class="border border-border/20 rounded-3xl bg-card/60 backdrop-blur-lg overflow-hidden"
+                >
                     <div class="aspect-[4/3] lg:aspect-[16/10]">
                         <iframe
                             src="https://calendly.com/charlotte-drouilly"

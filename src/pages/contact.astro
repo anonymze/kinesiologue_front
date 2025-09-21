@@ -21,20 +21,20 @@ const contactInfo = [
     {
         icon: "mail",
         title: "Email",
-        value: "charlotte@kinesiologie.ch",
+        value: "charlottedrouilly.kinesiologue@gmail.com",
         subtitle: "Réponse sous 48h en moyenne",
     },
     {
         icon: "phone",
         title: "Téléphone Suisse",
-        value: "+41 22 123 45 67",
+        value: "+41 ...",
         country: "ch",
         flagEmoji: "🇨🇭",
     },
     {
         icon: "phone",
         title: "Téléphone France",
-        value: "+33 6 12 34 56 78",
+        value: "+33 ...",
         country: "fr",
         flagEmoji: "🇫🇷",
     },
@@ -45,16 +45,16 @@ const cabinetLocations = [
     {
         country: "Suisse",
         title: "Mon cabinet à Genève",
-        address: "Rue du Rhône 123, 1204 Genève, Suisse",
+        address: "Cour des Bastions 13, 1205 Genève",
         flagEmoji: "🇨🇭",
-        mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2762.5!2d6.1443!3d46.2044!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478c6504a3b91f8b%3A0x1234567890!2sGenève%2C%20Switzerland!5e0!3m2!1sen!2sfr!4v1234567890",
+        mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2761.6816910717484!2d6.147392812321269!3d46.19689257097485!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478c7ad2b1dc833d%3A0x2757efec9a808d8!2sCours%20des%20Bastions%2013%2C%201205%20Gen%C3%A8ve%2C%20Suisse!5e0!3m2!1sfr!2sfr!4v1758453057178!5m2!1sfr!2sfr",
     },
     {
         country: "France",
         title: "Mon cabinet en France",
-        address: "Rue de la Paix 45, 74100 Annemasse, France",
+        address: "...",
         flagEmoji: "🇫🇷",
-        mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2762.5!2d6.2358!3d46.1944!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478c655c8b7b3a4f%3A0x1234567890!2sAnnemasse%2C%20France!5e0!3m2!1sen!2sfr!4v1234567890",
+        mapUrl: "",
     },
 ];
 ---
@@ -83,10 +83,10 @@ const cabinetLocations = [
                     <p
                         class="text-muted-foreground text-lg max-w-3xl mx-auto leading-relaxed"
                     >
-                        Je serais ravie de <strong
-                            >répondre à vos questions</strong
-                        > et de vous accompagner dans votre
-                        <strong>parcours bien-être</strong> en kinésiologie
+                        Kinésiologue, je vous accompagne dans votre voyage vers
+                        l'harmonie intérieure à travers le test musculaire, afin
+                        de retrouver votre <strong>équilibre intérieur</strong> adapter à vous
+                        dans un esprit de <strong>pure bienveillance</strong>.
                     </p>
                 </header>
             </div>
@@ -97,14 +97,10 @@ const cabinetLocations = [
             <div class="max-w-7xl mx-auto px-8 sm:px-12 lg:px-16">
                 <!-- Contact Info -->
 
-                <div
-                    class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8"
-                >
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
                     {
                         contactInfo.map((info, index) => (
-                            <article
-                                class="border border-border/20 rounded-3xl bg-card/60 backdrop-blur-lg"
-                            >
+                            <article class="border border-border/20 rounded-3xl bg-card/60 backdrop-blur-lg">
                                 <div class="p-6">
                                     <div class="flex items-start space-x-4">
                                         <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center flex-shrink-0 organic-shape">
@@ -189,13 +185,58 @@ const cabinetLocations = [
                                         <div>
                                             <div class="font-medium text-foreground mb-1 flex items-center">
                                                 {info.title}
-                                                {info.flagEmoji && (
-                                                    <span
-                                                        class="ml-2 text-lg"
-                                                        aria-label={`Drapeau ${info.country === "ch" ? "Suisse" : "France"}`}
+                                                {info.country === "ch" && (
+                                                <svg
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    viewBox="0 0 3 2"
+                                                    class="size-5 ml-2 mb-0.5"
+                                                >
+                                                    <rect
+                                                        width="3"
+                                                        height="5"
+                                                        fill="#dc143c"
+                                                    />
+                                                    <rect
+                                                        x="1.25"
+                                                        y="0.2"
+                                                        width="0.5"
+                                                        height="2"
+                                                        fill="#ffffff"
+                                                    />
+                                                    <rect
+                                                        x="0.375"
+                                                        y="0.95"
+                                                        width="2.25"
+                                                        height="0.5"
+                                                        fill="#ffffff"
+                                                    />
+                                                </svg>
+                                                )}
+                                                {info.country === "fr" && (
+                                                    <svg
+                                                        xmlns="http://www.w3.org/2000/svg"
+                                                        viewBox="0 0 3 2"
+                                                        class="size-5 ml-2"
+                                                        aria-label="Drapeau France"
                                                     >
-                                                        {info.flagEmoji}
-                                                    </span>
+                                                        <rect
+                                                            width="1"
+                                                            height="2"
+                                                            fill="#002654"
+                                                        />
+                                                        <rect
+                                                            x="1"
+                                                            width="1"
+                                                            height="2"
+                                                            fill="#ffffff"
+                                                        />
+                                                        <rect
+                                                            x="2"
+                                                            width="1"
+                                                            height="2"
+                                                            fill="#ce1126"
+                                                        />
+                                                    </svg>
                                                 )}
                                             </div>
                                             <p class="text-muted-foreground">
@@ -215,10 +256,7 @@ const cabinetLocations = [
         </section>
 
         <!-- Location Section -->
-        <section
-            class="py-20 bg-white"
-            aria-labelledby="location-heading"
-        >
+        <section class="py-20 bg-white" aria-labelledby="location-heading">
             <div class="max-w-7xl mx-auto px-8 sm:px-12 lg:px-16">
                 <header class="text-center mb-12">
                     <h2
@@ -228,7 +266,7 @@ const cabinetLocations = [
                         Mes cabinets
                     </h2>
                     <p class="text-muted-foreground text-lg">
-                        Deux espaces de sérénité pour votre bien-être
+                        Deux espaces de sérénité pour votre bien-être.
                     </p>
                 </header>
 
@@ -253,12 +291,59 @@ const cabinetLocations = [
                                             <circle cx="12" cy="10" r="3" />
                                         </svg>
                                         {cabinet.title}
-                                        <span
-                                            class="ml-2 text-2xl"
-                                            aria-label={`Drapeau ${cabinet.country}`}
+                                        {cabinet.country === "Suisse" && (
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 3 2"
+                                            class="size-5 ml-2 mb-0.5"
                                         >
-                                            {cabinet.flagEmoji}
-                                        </span>
+                                            <rect
+                                                width="3"
+                                                height="5"
+                                                fill="#dc143c"
+                                            />
+                                            <rect
+                                                x="1.25"
+                                                y="0.2"
+                                                width="0.5"
+                                                height="2"
+                                                fill="#ffffff"
+                                            />
+                                            <rect
+                                                x="0.375"
+                                                y="0.95"
+                                                width="2.25"
+                                                height="0.5"
+                                                fill="#ffffff"
+                                            />
+                                        </svg>
+                                        )}
+                                        {cabinet.country === "France" && (
+                                            <svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                viewBox="0 0 3 2"
+                                                class="size-6 ml-2"
+                                                aria-label="Drapeau France"
+                                            >
+                                                <rect
+                                                    width="1"
+                                                    height="2"
+                                                    fill="#002654"
+                                                />
+                                                <rect
+                                                    x="1"
+                                                    width="1"
+                                                    height="2"
+                                                    fill="#ffffff"
+                                                />
+                                                <rect
+                                                    x="2"
+                                                    width="1"
+                                                    height="2"
+                                                    fill="#ce1126"
+                                                />
+                                            </svg>
+                                        )}
                                     </h3>
 
                                     <div class="bg-primary/10 rounded-2xl p-4 border border-primary/20 mb-6">

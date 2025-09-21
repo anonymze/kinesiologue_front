@@ -58,37 +58,6 @@ const services = [
     },
 ];
 
-// Package deals
-const packages = [
-    {
-        title: "Forfait Découverte",
-        sessions: "3 séances",
-        originalPrice: "360 CHF",
-        price: "315 CHF",
-        savings: "45 CHF d'économie",
-        description: "Idéal pour commencer votre parcours bien-être",
-        popular: false,
-    },
-    {
-        title: "Forfait Équilibre",
-        sessions: "5 séances",
-        originalPrice: "600 CHF",
-        price: "525 CHF",
-        savings: "75 CHF d'économie",
-        description: "Pour un accompagnement régulier et durable",
-        popular: true,
-    },
-    {
-        title: "Forfait Transformation",
-        sessions: "10 séances",
-        originalPrice: "1200 CHF",
-        price: "1050 CHF",
-        savings: "150 CHF d'économie",
-        description: "Pour une transformation profonde et durable",
-        popular: false,
-    },
-];
-
 // Practical information
 const paymentInfo = [
     "Espèces, chèque ou virement bancaire",
@@ -130,14 +99,16 @@ const cancellationInfo = [
                         class="text-muted-foreground text-lg max-w-3xl mx-auto leading-relaxed"
                     >
                         Des <strong>tarifs transparents</strong> pour des accompagnements
-                        de qualité en <strong>kinésiologie</strong>, adaptés à vos
-                        besoins et votre budget
+                        de qualité en <strong>kinésiologie</strong>, adaptés à
+                        vos besoins et votre budget
                     </p>
                 </header>
 
                 <!-- Important Notice -->
-                <div class="max-w-3xl mx-auto">
-                    <div class="bg-amber-50 border border-amber-200 rounded-2xl p-6 mb-8">
+                <div class="max-w-4xl mx-auto">
+                    <div
+                        class="bg-amber-50 border border-amber-200 rounded-2xl p-6 mb-8"
+                    >
                         <div class="flex items-start space-x-3 text-center">
                             <svg
                                 class="w-6 h-6 text-amber-600 flex-shrink-0 mt-0.5"
@@ -150,27 +121,33 @@ const cancellationInfo = [
                                 stroke-linejoin="round"
                                 aria-hidden="true"
                             >
-                                <path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/>
-                                <path d="M12 9v4"/>
-                                <path d="M12 17h.01"/>
+                                <path
+                                    d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"
+                                ></path>
+                                <path d="M12 9v4"></path>
+                                <path d="M12 17h.01"></path>
                             </svg>
                             <div>
                                 <h2 class="font-semibold text-amber-800 mb-2">
                                     Information importante
                                 </h2>
-                                <p class="text-amber-700 text-sm leading-relaxed">
-                                    <strong>Attention :</strong> Les mutuelles françaises ne prennent pas en charge
-                                    les consultations effectuées dans un cabinet situé en Suisse.
-                                    Pour un remboursement mutuelle, privilégiez le cabinet français.
+                                <p
+                                    class="text-amber-700 text-sm leading-relaxed"
+                                >
+                                    <strong>Remboursement :</strong> Pas encore membre
+                                    des réseaux ASCA / RME. <br />
+                                    Les mutuelles françaises ne prennent pas en charge
+                                    mes consultations, que vous soyez frontalier
+                                    ou résident en France.
                                 </p>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
                     {
-                        services.map((service, index) => (
+                        services.map((service) => (
                             <article
                                 class="border border-border/20 rounded-3xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 bg-card/60 backdrop-blur-lg"
                                 itemscope
@@ -260,18 +237,62 @@ const cancellationInfo = [
                                                 {service.duration}
                                             </span>
                                         </div>
-                                        <div class="text-center">
-                                            <div class="flex items-center justify-center space-x-3 mb-2">
-                                                <div class="text-lg font-bold text-primary flex items-center">
-                                                    🇫🇷 {service.priceFrance}
-                                                </div>
-                                                <div class="w-px h-6 bg-border"></div>
-                                                <div class="text-lg font-bold text-primary flex items-center">
-                                                    🇨🇭 {service.priceSuisse}
-                                                </div>
+
+                                        <div class="flex items-center justify-center space-x-3">
+                                            <div class="text-lg font-bold text-primary flex items-center justify-center">
+                                                <svg
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    viewBox="0 0 3 2"
+                                                    class="size-6 mr-2"
+                                                >
+                                                    <rect
+                                                        width="1"
+                                                        height="2"
+                                                        fill="#002654"
+                                                    />
+                                                    <rect
+                                                        x="1"
+                                                        width="1"
+                                                        height="2"
+                                                        fill="#ffffff"
+                                                    />
+                                                    <rect
+                                                        x="2"
+                                                        width="1"
+                                                        height="2"
+                                                        fill="#ce1126"
+                                                    />
+                                                </svg>
+                                                {service.priceFrance}
                                             </div>
-                                            <div class="text-xs text-muted-foreground">
-                                                France • Suisse
+                                            <div class="w-px h-6 bg-border" />
+                                            <div class="text-lg font-bold text-primary flex items-center">
+                                                <svg
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    viewBox="0 0 3 2"
+                                                    class="size-5 mr-2 mb-0.5"
+                                                >
+                                                    <rect
+                                                        width="3"
+                                                        height="5"
+                                                        fill="#dc143c"
+                                                    />
+                                                    <rect
+                                                        x="1.25"
+                                                        y="0.2"
+                                                        width="0.5"
+                                                        height="2"
+                                                        fill="#ffffff"
+                                                    />
+                                                    <rect
+                                                        x="0.375"
+                                                        y="0.95"
+                                                        width="2.25"
+                                                        height="0.5"
+                                                        fill="#ffffff"
+                                                    />
+                                                </svg>
+                                                {service.priceSuisse}
                                             </div>
                                         </div>
                                     </div>
@@ -317,10 +338,7 @@ const cancellationInfo = [
         </section>
 
         <!-- Packages Section -->
-        <section
-            class="py-24 bg-white"
-            aria-labelledby="packages-heading"
-        >
+        <section class="py-24 bg-white" aria-labelledby="packages-heading">
             <div class="max-w-5xl mx-auto px-8 sm:px-12 lg:px-16">
                 <header class="text-center mb-12">
                     <h2

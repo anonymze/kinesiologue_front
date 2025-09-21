@@ -7,12 +7,12 @@ import LogoImg from "@/assets/images/logo.webp";
 const businessInfo = {
     name: "Charlotte Drouilly",
     profession: "Kinésiologue",
-    phone: "+41 22 123 45 67",
-    email: "charlotte.drouilly@kinesio.ch",
+    phone: "+41 ...",
+    email: "charlottedrouilly.kinesiologue@gmail.com",
     address: {
-        street: "15 Rue du Rhône",
+        street: "Cour des Bastions 13, 1205 Genève",
         city: "Genève",
-        postalCode: "1204",
+        postalCode: "1205",
         country: "Suisse",
     },
     description:
@@ -82,14 +82,14 @@ const navItems = [
                         class="flex items-center space-x-6 text-muted-foreground text-lg font-sans"
                     >
                         <div
-                            class="w-14 h-14 flex items-center justify-center bg-secondary organic-shape"
+                            class="w-14 h-14 min-w-14 flex items-center justify-center bg-secondary organic-shape"
                             aria-hidden="true"
                         >
                             <Mail className="w-6 h-6 text-white" />
                         </div>
                         <a
                             href={`mailto:${businessInfo.email}`}
-                            class="hover:text-primary transition-colors duration-300"
+                            class="hover:text-primary break-all transition-colors duration-300"
                             aria-label={`Envoyer un email à ${businessInfo.name}`}
                             itemprop="email"
                         >
@@ -101,7 +101,7 @@ const navItems = [
                         class="flex items-center space-x-6 text-muted-foreground text-lg font-sans"
                     >
                         <div
-                            class="w-14 h-14 flex items-center justify-center bg-secondary organic-shape"
+                            class="w-14 h-14 min-w-14 flex items-center justify-center bg-secondary organic-shape"
                             aria-hidden="true"
                         >
                             <MapPin className="w-6 h-6 text-white" />
