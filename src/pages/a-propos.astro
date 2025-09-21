@@ -6,21 +6,16 @@ import { Image } from "astro:assets";
 // Qualifications with enhanced SEO
 const qualifications = [
     {
-        title: "École Florac Paris",
-        description:
-            "Formation transformatrice en massage bien-être (2011-2013)",
+        title: "Diplomée de l’EKMA",
+        description: "Mars 2023",
         icon: "award",
+        link: "https://kinesiologie.fr",
     },
     {
-        title: "Massage Énergétique",
-        description: "Spécialisation auprès d'athlètes de haut niveau (Zurich)",
+        title: "Constellation familiale",
+        description: "En cours de formation",
+        link: "",
         icon: "users",
-    },
-    {
-        title: "Kinésiologie Sacrée",
-        description:
-            "Initiation en kinésiologie et ostéopathie crânienne (Australie)",
-        icon: "heart",
     },
 ];
 ---
@@ -145,11 +140,16 @@ const qualifications = [
                         id="qualifications-heading"
                         class="font-sans font-bold text-3xl md:text-4xl text-foreground leading-tight"
                     >
-                        Formations et initiations sacrées
+                        Formations et initiations réalisées
                     </h2>
+                    <p
+                        class="text-muted-foreground text-lg max-w-3xl mx-auto leading-relaxed mt-4"
+                    >
+                        Je suis des formations en kinésiologie pour parfaire mes connaissances et mes compétences en matière de <strong>bien-être</strong>.
+                    </p>
                 </header>
 
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
                     {
                         qualifications.map((qualification, index) => (
                             <article
@@ -226,6 +226,16 @@ const qualifications = [
                                     >
                                         {qualification.description}
                                     </p>
+                                    {qualification.link && (
+                                        <a
+                                            href={qualification.link}
+                                            class="text-primary hover:text-primary/50 transition-colors duration-200"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                        >
+                                            {qualification.link}
+                                        </a>
+                                    )}
                                 </div>
                             </article>
                         ))
