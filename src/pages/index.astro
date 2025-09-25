@@ -6,6 +6,7 @@ import WaterPeaceImg from "@/assets/images/water-peace.webp";
 import Layout from "@/layouts/layout.astro";
 import { businessInfo } from "@/utils/helper";
 import { Image } from "astro:assets";
+import { HeartIcon } from "lucide-react";
 
 // Services with SEO-optimized content
 const services = [
@@ -341,7 +342,8 @@ const testimonials = [
                                 itemscope
                                 itemtype="https://schema.org/Review"
                             >
-                                <div class="p-12 flex flex-col h-full">
+                                <div class="p-10 flex flex-col h-full">
+                                    <HeartIcon className="w-8 h-8 mb-6 text-primary mx-auto" />
                                     <blockquote
                                         class="text-muted-foreground mb-10 leading-relaxed text-lg italic font-sans"
                                         itemprop="reviewBody"
