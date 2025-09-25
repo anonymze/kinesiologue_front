@@ -1,8 +1,8 @@
 ---
-import MobileMenuToggle from "@/components/mobile-menu-toggle.tsx";
 import LogoImg from "@/assets/images/logo_blanc.webp";
-import { Image } from "astro:assets";
+import MobileMenuToggle from "@/components/mobile-menu-toggle.tsx";
 import { businessInfo } from "@/utils/helper";
+import { Image } from "astro:assets";
 import { Calendar1Icon } from "lucide-react";
 
 // Get current page path
@@ -57,10 +57,9 @@ const navItems = [
                         <div class="w-12 h-12 bg-gradient-to-br from-primary to-secondary organic-shape flex items-center justify-center shadow-lg">
                             <Image
                                 src={LogoImg}
-                                width={53}
-                                height={54}
                                 alt={`Logo de ${businessInfo.name}`}
                                 loading="eager"
+                                                        class={"object-cover w-9"}
                             />
                         </div>
                         <div class="flex flex-col">

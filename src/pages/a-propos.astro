@@ -1,5 +1,6 @@
 ---
 import CharlottePeinteImg from "@/assets/images/charlotte-peintre.webp";
+import EkmaImage from "@/assets/images/ekma.webp";
 import Layout from "@/layouts/layout.astro";
 import { Image } from "astro:assets";
 
@@ -8,13 +9,15 @@ const qualifications = [
     {
         title: "Diplomée de l’EKMA",
         description: "Mars 2023",
-        icon: "award",
+        image: "ekma",
+        alt: "Logo du diplôme d'Ekma",
         link: "https://kinesiologie.fr",
     },
     {
         title: "Constellation familiale",
         description: "En cours de formation",
-        link: "",
+        image: "",
+        alt: "",
         icon: "users",
     },
 ];
@@ -29,7 +32,6 @@ const qualifications = [
     <main role="main">
         <!-- Hero Section -->
         <section
-
             class="py-24 bg-gradient-to-b from-card/60 to-background/30"
             aria-labelledby="about-hero-heading"
             role="banner"
@@ -146,7 +148,10 @@ const qualifications = [
                     <p
                         class="text-muted-foreground text-lg max-w-3xl mx-auto leading-relaxed mt-4"
                     >
-                        Je suis des formations en kinésiologie pour parfaire mes connaissances et mes compétences en matière de <strong>bien-être</strong>.
+                        Je suis des formations en kinésiologie pour parfaire mes
+                        connaissances et mes compétences en matière de <strong
+                            >bien-être</strong
+                        >.
                     </p>
                 </header>
 
@@ -154,75 +159,26 @@ const qualifications = [
                     {
                         qualifications.map((qualification, index) => (
                             <article
-                                class="border border-border/20 rounded-3xl hover:shadow-2xl transition-all duration-700 hover:-translate-y-4 bg-card/70 backdrop-blur-lg"
+                                class="border border-border/20 rounded-3xl hover:shadow-2xl transition-all duration-700 hover:-translate-y-4 bg-card/70 backdrop-blur-lg bg-primary"
                                 itemscope
                                 itemtype="https://schema.org/EducationalCredential"
                             >
                                 <div class="p-12 text-center">
-                                    <div
-                                        class="w-24 h-24 bg-gradient-to-br from-primary/40 to-secondary/30 rounded-full flex items-center justify-center mx-auto mb-10"
-                                        aria-hidden="true"
-                                    >
-                                        {qualification.icon === "award" && (
-                                            <svg
-                                                class="w-12 h-12 text-primary"
-                                                xmlns="http://www.w3.org/2000/svg"
-                                                viewBox="0 0 24 24"
-                                                fill="none"
-                                                stroke="currentColor"
-                                                stroke-width="2"
-                                                stroke-linecap="round"
-                                                stroke-linejoin="round"
-                                                aria-label="Icône certification académique"
-                                            >
-                                                <path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526" />
-                                                <circle cx="12" cy="8" r="6" />
-                                            </svg>
-                                        )}
-                                        {qualification.icon === "users" && (
-                                            <svg
-                                                class="w-12 h-12 text-primary"
-                                                xmlns="http://www.w3.org/2000/svg"
-                                                viewBox="0 0 24 24"
-                                                fill="none"
-                                                stroke="currentColor"
-                                                stroke-width="2"
-                                                stroke-linecap="round"
-                                                stroke-linejoin="round"
-                                                aria-label="Icône spécialisation professionnelle"
-                                            >
-                                                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
-                                                <circle cx="9" cy="7" r="4" />
-                                                <path d="m22 21-2-2" />
-                                                <circle cx="16" cy="11" r="3" />
-                                            </svg>
-                                        )}
-                                        {qualification.icon === "heart" && (
-                                            <svg
-                                                class="w-12 h-12 text-primary"
-                                                xmlns="http://www.w3.org/2000/svg"
-                                                viewBox="0 0 24 24"
-                                                fill="none"
-                                                stroke="currentColor"
-                                                stroke-width="2"
-                                                stroke-linecap="round"
-                                                stroke-linejoin="round"
-                                                aria-label="Icône formation holistique"
-                                            >
-                                                <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.29 1.51 4.04 3 5.5l7 7Z" />
-                                            </svg>
-                                        )}
-                                    </div>
+                                    <Image
+                                        src={qualification.image === "ekma" ? EkmaImage : EkmaImage}
+                                        alt={qualification.alt}
+                                        class={"mx-auto object-cover w-50"}
+                                    />
 
                                     <h3
-                                        class="font-sans font-bold text-2xl text-foreground mb-6"
+                                        class="font-sans font-bold text-2xl text-white mb-6"
                                         itemprop="name"
                                     >
                                         {qualification.title}
                                     </h3>
 
                                     <p
-                                        class="text-muted-foreground text-lg leading-relaxed font-sans mb-4"
+                                        class="text-white/80 text-lg leading-relaxed font-sans mb-4"
                                         itemprop="description"
                                     >
                                         {qualification.description}
@@ -230,7 +186,7 @@ const qualifications = [
                                     {qualification.link && (
                                         <a
                                             href={qualification.link}
-                                            class="text-primary hover:text-primary/50 transition-colors duration-200"
+                                            class="text-white/80 hover:text-white/50 transition-colors duration-200"
                                             target="_blank"
                                             rel="noopener noreferrer"
                                         >
