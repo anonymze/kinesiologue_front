@@ -1,6 +1,6 @@
 ---
 import { Image } from "astro:assets";
-import { Phone, Mail, MapPin } from "lucide-react";
+import { Phone, Mail, MapPin, Instagram, Facebook } from "lucide-react";
 import LogoImg from "@/assets/images/logo.webp";
 
 // Business information with structured data
@@ -49,7 +49,7 @@ const navItems = [
     role="contentinfo"
 >
     <div class="max-w-7xl mx-auto px-6 sm:px-10 lg:px-14 pt-12 pb-8">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-20">
+        <div class="grid grid-cols-1 lg:grid-cols-4 gap-20">
             <!-- Contact Information Section -->
             <section class="space-y-10" aria-labelledby="contact-heading">
                 <h3
@@ -152,6 +152,38 @@ const navItems = [
                     }
                 </ul>
             </nav>
+
+            <!-- Social Media Section -->
+            <section class="space-y-10" aria-labelledby="social-heading">
+                <h3
+                    id="social-heading"
+                    class="font-sans font-bold text-2xl text-foreground mb-10"
+                >
+                    Réseaux sociaux
+                </h3>
+                <div class="flex items-center space-x-7">
+                    <a
+                        href="https://www.instagram.com/charlotte_kinesiologue_"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="w-12 h-12 flex items-center justify-center bg-gradient-to-br from-pink-500 to-purple-600 text-white rounded-full hover:scale-110 transition-transform duration-300 shadow-lg"
+                        aria-label="Suivre Charlotte Drouilly sur Instagram"
+                        title="Instagram de Charlotte Drouilly"
+                    >
+                        <Instagram className="w-6 h-6" />
+                    </a>
+                    <a
+                        href="https://www.facebook.com/profile.php?id=100089654230930"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="w-12 h-12 flex items-center justify-center bg-blue-600 text-white rounded-full hover:scale-110 transition-transform duration-300 shadow-lg"
+                        aria-label="Suivre Charlotte Drouilly sur Facebook"
+                        title="Facebook de Charlotte Drouilly"
+                    >
+                        <Facebook className="w-6 h-6" />
+                    </a>
+                </div>
+            </section>
 
             <!-- About Section -->
             <section

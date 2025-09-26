@@ -50,4 +50,4 @@ avis google reprendre https://audreycatherine-kinesiologue.fr/
 
 section carte cadeaux page tarifs
 
-presentation dashboard cercle des femmes
+réseaux sociaux footer

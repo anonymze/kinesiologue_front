@@ -1,10 +1,12 @@
 ---
-import CharlotteSunImg from "@/assets/images/charlotte-sun.webp";
-import ConstellImg from "@/assets/images/constell-3.webp";
 import KinesiologieImg from "@/assets/images/cabinet-2.webp";
+import CharlotteSunImg from "@/assets/images/charlotte-sun.webp";
+import CercleImg from "@/assets/images/cercle-1.webp";
+import ConstellImg from "@/assets/images/constell-3.webp";
 import DetoxImg from "@/assets/images/detox.webp";
 import forestImg from "@/assets/images/forest.webp";
 import LogoImg from "@/assets/images/logo_blanc.webp";
+import QrcodeImg from "@/assets/images/qrcode.webp";
 import WaterPeaceImg from "@/assets/images/water-peace.webp";
 import Layout from "@/layouts/layout.astro";
 import { businessInfo } from "@/utils/helper";
@@ -34,7 +36,7 @@ const services = [
         title: "Constellation familiale sur l'eau",
         description: "Formation en cours d'acquisition",
         keywords: "",
-        bannier: "En ligne"
+        bannier: "En ligne",
     },
 ];
 
@@ -207,9 +209,96 @@ const testimonials = [
             </div>
         </section>
 
+        <!-- Cercle de femmes Section -->
+        <section
+            class="py-24 bg-gradient-to-br from-purple-50 via-pink-50 to-orange-50"
+            aria-labelledby="cercle-heading"
+            role="region"
+            itemscope
+            itemtype="https://schema.org/Event"
+        >
+            <div class="max-w-5xl mx-auto px-8 sm:px-12 lg:px-16">
+                <article class="text-center space-y-8">
+                    <header>
+                        <div
+                            class="inline-flex items-center gap-2 bg-gradient-to-r from-secondary to-primary text-white px-6 py-3 rounded-full text-sm font-bold uppercase tracking-wider mb-6"
+                        >
+                            <span class="text-lg">🌟</span>
+                            Nouveau
+                        </div>
+                        <h2
+                            id="cercle-heading"
+                            class="font-sans font-bold text-4xl md:text-5xl text-foreground mb-6 leading-tight"
+                            itemprop="name"
+                        >
+                            Cercle de femmes à Genève
+                        </h2>
+                    </header>
+
+                    <div
+                        class="space-y-6 text-lg leading-relaxed font-sans max-w-4xl mx-auto"
+                    >
+                        <p class="text-muted-foreground">
+                            🫧 C'est une bulle hors du temps, un <strong
+                                >espace sacré</strong
+                            > où l'on dépose ce qui pèse et où l'on se relie à ce
+                            qui nourrit.
+                        </p>
+
+                        <p class="text-muted-foreground">
+                            🪷 Entre <strong>douceur, partage et silence</strong
+                            >, ce moment t'invite à (re)venir à ton corps, à tes <strong
+                                >émotions</strong
+                            > et à ton cœur.
+                        </p>
+
+                        <p class="text-muted-foreground">
+                            🍃 Un temps pour respirer, t'ancrer et retrouver la <strong
+                                >femme que tu es profondément</strong
+                            >.
+                        </p>
+                    </div>
+
+                    <div class="relative w-full max-w-155 max-h-160 mx-auto">
+                        <Image
+                            src={CercleImg}
+                            alt="Qrcode compte instagram"
+                            class="object-cover"
+                            loading="lazy"
+                            class="w-full max-w-155 max-h-160 object-cover mx-auto rounded-lg"
+                        />
+                        <Image
+                            src={QrcodeImg}
+                            alt="Qrcode compte instagram"
+                            class="object-cover"
+                            loading="lazy"
+                            class="size-35 object-cover mx-auto rounded-lg absolute bottom-1 right-1 hidden md:block"
+                        />
+                    </div>
+
+                    <div
+                        class="space-y-6 text-lg leading-relaxed font-sans max-w-4xl mx-auto mt-8"
+                    >
+                        <p class="text-primary font-medium italic">
+                            Un <strong>rendez-vous avec toi-même</strong>,
+                            enveloppé de <strong>bienveillance</strong>. 🌿
+                        </p>
+
+                        <a
+                            href="/tarifs#cercle"
+                            class="flex gap-4 mt-auto items-center w-fit mx-auto justify-center bg-secondary hover:bg-secondary/90 text-primary-foreground rounded-full px-10 py-3 text-lg shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-102 font-sans focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2"
+                            title="Les tarifs  du cercle de femmes"
+                        >
+                            Voir les tarifs
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
         <!-- Services Section -->
         <section
-            class="py-24 relative overflow-hidden bg-white"
+            class="py-24 relative overflow-hidden bg-slate-100"
             aria-labelledby="services-heading"
             role="region"
         >
@@ -313,7 +402,7 @@ const testimonials = [
 
         <!-- Testimonials Section -->
         <section
-            class="py-24 relative overflow-hidden bg-slate-100"
+            class="py-24 relative overflow-hidden bg-white"
             aria-labelledby="testimonials-heading"
             role="region"
         >
