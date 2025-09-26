@@ -164,12 +164,13 @@ const qualifications = [
                                 itemtype="https://schema.org/EducationalCredential"
                             >
                                 <div class="p-12 text-center">
+                                    <div class="flex items-center">
                                     {qualification.image === "ekma" && (
                                         <Image
                                             src={EkmaImg}
                                             alt={qualification.alt}
                                             class={
-                                                "mx-auto object-cover w-50 mb-7"
+                                                "mx-auto object-cover mb-3 h-30 w-60"
                                             }
                                         />
                                     )}
@@ -178,9 +179,10 @@ const qualifications = [
                                         <Image
                                             src={ConstellationImg}
                                             alt={qualification.alt}
-                                            class="size-30 object-cover rounded-full mb-3 mx-auto"
+                                            class="size-30 object-cover rounded-full mb-3 h-30 mx-auto"
                                         />
                                     )}
+                                    </div>
 
                                     <h3
                                         class="font-sans font-bold text-2xl text-white mb-6"
