@@ -48,13 +48,6 @@ https://www.facebook.com/profile.php?id=100089654230930
 avis google reprendre https://audreycatherine-kinesiologue.fr/
 
 
-badge presentalitenn et en ligne sur page d'accueil et tarifs
-
-
-badge evenement pour cercle des femmes
-
 section carte cadeaux page tarifs
 
-scroll calendly
-
-presentation dashboard
+presentation dashboard cercle des femmes
