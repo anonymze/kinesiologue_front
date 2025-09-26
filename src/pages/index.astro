@@ -1,10 +1,8 @@
 ---
 import CharlotteSunImg from "@/assets/images/charlotte-sun.webp";
-import ConstellImg from "@/assets/images/constell-2.webp";
+import ConstellImg from "@/assets/images/constell-3.webp";
 import KinesiologieImg from "@/assets/images/cabinet-2.webp";
-import
-    DetoxImg
- from "@/assets/images/detox.webp";
+import DetoxImg from "@/assets/images/detox.webp";
 import forestImg from "@/assets/images/forest.webp";
 import LogoImg from "@/assets/images/logo_blanc.webp";
 import WaterPeaceImg from "@/assets/images/water-peace.webp";
@@ -18,9 +16,10 @@ const services = [
     {
         icon: "heart",
         title: "Kinésiologie",
-        description: "Libération émotionnelle",
+        description: "Retrouver l'harmonie du corps",
         keywords:
-            "Gestion du stress (angoisses; burn out; doutes; peurs...), Comprendre les addictions, Soigner les maux du corps (et non les maladies), Rétablir la concentration et l'apprentissage",
+            "Libération émotionnelle, Gestion du stress (angoisses; burn out; doutes; peurs...), Comprendre les addictions, Soigner les maux du corps (et non les maladies), Rétablir la concentration et l'apprentissage",
+        more: true,
     },
     {
         icon: "leaf",
@@ -31,9 +30,9 @@ const services = [
     },
     {
         icon: "users",
-        title: "Constellation familiale",
+        title: "Constellation familiale sur l'eau",
         description: "Formation en cours d'acquisition",
-        keywords: "Point A, Point B, Point C...",
+        keywords: "",
     },
 ];
 
@@ -90,7 +89,7 @@ const testimonials = [
                     class="font-sans font-bold text-5xl md:text-7xl text-white mb-12 text-balance leading-tight tracking-wide text-shadow-md"
                 >
                     Retrouvez l'harmonie
-                    <span class="block text-secondary/90 text-shadow-md"
+                    <span class="block text-secondary text-shadow-md"
                         >avec vous-même</span
                     >
                 </h1>
@@ -99,7 +98,7 @@ const testimonials = [
                     class="text-xl md:text-2xl text-white/95 mb-16 text-pretty max-w-4xl mx-auto leading-relaxed text-shadow-md"
                 >
                     Un voyage intérieur avec <strong>{businessInfo.name}</strong
-                    >, kinésiologue expérimentée à Genève et Annemasse, pour
+                    >, kinésiologue expérimentée à Genève et Haute-Savoie, pour
                     retrouver votre équilibre intérieur.
                 </p>
 
@@ -146,16 +145,23 @@ const testimonials = [
                             class="space-y-10 text-muted-foreground text-lg leading-relaxed font-sans"
                         >
                             <p>
-                                La kinésiologie aide à vous libérer de vos
-                                blocages pour vous permettre de retrouver votre
-                                plein potentiel et équilibre intérieur.
+                                La kinésiologie est une approche <strong
+                                    >douce et globale</strong
+                                >, qui permet d’avoir un équilibre entre le
+                                corps, l’esprit et les <strong>émotions</strong
+                                >.
                             </p>
                             <p>
-                                <strong>Riche de formations variées</strong>,
-                                j'ai exploré différentes approches
-                                thérapeutiques pour créer un accompagnement
-                                personnalisé, où chaque séance devient une étape
-                                vers votre meilleur vous.
+                                Le coeur de chaque séance repose sur
+                                l’utilisation du <strong>test musculaire</strong
+                                >, qui est pour moi ma boussole me guidant tout
+                                au long de notre échange. Cela permet
+                                d’identifier les blocages et déséquilibres.
+                            </p>
+                            <p>
+                                L’équilibre se réalise à travers différentes
+                                techniques comme : la visualisation, points
+                                d’accupressure, respiration…
                             </p>
                         </div>
 
@@ -278,6 +284,18 @@ const testimonials = [
                                                     </li>
                                                 ))}
                                         </ul>
+                                    )}
+
+                                    {service.more && (
+                                        <a
+                                            href="/#"
+                                            class="inline-flex gap-4 mt-5 items-center bg-secondary hover:bg-secondary/90 text-primary-foreground rounded-full px-10 py-3 text-lg shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-102 font-sans focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2"
+                                            title="Réserver une consultation en kinésiologie avec Charlotte Drouilly à Genève"
+                                            aria-label="Prendre rendez-vous pour une séance de kinésiologie avec Charlotte Drouilly via Calendly"
+                                        >
+
+                                            En savoir plus
+                                        </a>
                                     )}
                                 </div>
                             </article>

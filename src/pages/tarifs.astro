@@ -1,5 +1,10 @@
 ---
+import CFOImg from "@/assets/images/cfo.webp";
+import DetoxImg from "@/assets/images/detox.webp";
+import EnfantImg from "@/assets/images/enfant.webp";
+import CercleImg from "@/assets/images/cercle.webp";
 import Layout from "@/layouts/layout.astro";
+import { Image } from "astro:assets";
 
 // Page SEO data
 const pageData = {
@@ -13,64 +18,87 @@ const pageData = {
 // Services with dual pricing
 const services = [
     {
-        title: "Séance de Kinésiologie",
-        duration: "1h30",
-        priceFrance: "90 €",
-        priceSuisse: "120 CHF",
-        description:
-            "Séance complète incluant bilan énergétique et rééquilibrage",
+        title: "Séance de Kinésiologie ENFANT",
+        duration: "45 min.",
+        priceFrance: "60 €",
+        priceSuisse: "90 CHF",
+        description: "",
         features: [
-            "Test musculaire approfondi",
+            "Sommeil difficile",
+            "Énurésie",
+            "Difficulté à se concentrer",
+            "Diversification compliquée",
+            "Gestion des émotions...",
+        ],
+        icon: "enfant",
+    },
+    {
+        title: "Séance de Kinésiologie ADULTE",
+        duration: "1h",
+        priceFrance: "70 €",
+        priceSuisse: "100 CHF",
+        description: "",
+        features: [
+            "Libération émotionnelle",
+            "Gestion du stress",
             "Identification des déséquilibres",
             "Techniques de rééquilibrage",
-            "Conseils personnalisés",
+            "Conseils personnalisés...",
         ],
-        icon: "heart",
+        icon: "adulte",
     },
+
     {
-        title: "Massage Bien-être",
-        duration: "1h",
-        priceFrance: "75 €",
-        priceSuisse: "100 CHF",
-        description: "Massage relaxant personnalisé selon vos besoins",
+        title: "Détoxination énergétique",
+        duration: "1h30",
+        priceFrance: "80 €",
+        priceSuisse: "120 CHF",
+        description: "",
         features: [
-            "Choix de la technique adaptée",
-            "Huiles essentielles bio",
-            "Ambiance zen et apaisante",
-            "Moment de détente pure",
+            "Poils d'animaux",
+            "Perturbateurs endocriniens",
+            "Polluants de l'habitat",
+            "Additifs alimentaires...",
         ],
-        icon: "leaf",
+        icon: "detox",
     },
     {
-        title: "Accompagnement Holistique",
+        title: "Cercle de femmes",
         duration: "2h",
-        priceFrance: "135 €",
-        priceSuisse: "180 CHF",
-        description:
-            "Séance combinée kinésiologie et massage pour un bien-être global",
+        // priceFrance: "65 €",
+        priceSuisse: "60 CHF",
+        description: "",
         features: [
-            "Approche corps-esprit complète",
-            "Kinésiologie + massage",
-            "Suivi personnalisé",
-            "Plan de bien-être sur mesure",
+            "Un point entre femmes",
+            "Libérer les blocages intérieurs",
+            "Se connecter à sa force intérieure",
+            "S'accorder une pause",
+            "Honorer sa féminité",
         ],
-        icon: "users",
+        icon: "cercle",
+    },
+    {
+        title: "Constellation sur l'eau",
+        duration: "...",
+        priceFrance: "... €",
+        priceSuisse: "... CHF",
+        description: "",
+        features: ["En cours de formation..."],
+        icon: "constellation",
     },
 ];
 
 // Practical information
 const paymentInfo = [
-    "Espèces, chèque ou virement bancaire",
-    "Paiement à la séance ou forfait",
-    "Forfaits valables 6 mois",
+    "Espèces ou virement bancaire",
+    "Paiement à la séance",
     "Factures disponibles sur demande",
 ];
 
 const cancellationInfo = [
-    "Annulation gratuite 24h avant",
+    "Annulation gratuite 48h avant",
     "Séance due si annulation tardive",
     "Report possible selon disponibilités",
-    "Remboursement forfait si force majeure",
 ];
 ---
 
@@ -83,7 +111,7 @@ const cancellationInfo = [
     <main role="main">
         <!-- Hero Section -->
         <section
-            class="py-24 bg-gradient-to-b from-card/60 to-background/30"
+            class="py-24 bg-secondary/50"
             aria-labelledby="tarifs-hero-heading"
             role="banner"
         >
@@ -154,57 +182,38 @@ const cancellationInfo = [
                                 itemtype="https://schema.org/Service"
                             >
                                 <div class="p-8 text-center">
-                                    <div class="w-16 h-16 bg-gradient-to-br from-primary/40 to-secondary/30 rounded-full flex items-center justify-center mx-auto mb-6">
-                                        {service.icon === "heart" && (
-                                            <svg
-                                                class="w-8 h-8 text-primary"
-                                                xmlns="http://www.w3.org/2000/svg"
-                                                viewBox="0 0 24 24"
-                                                fill="none"
-                                                stroke="currentColor"
-                                                stroke-width="2"
-                                                stroke-linecap="round"
-                                                stroke-linejoin="round"
-                                                aria-label="Icône kinésiologie"
-                                            >
-                                                <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.29 1.51 4.04 3 5.5l7 7Z" />
-                                            </svg>
-                                        )}
-                                        {service.icon === "leaf" && (
-                                            <svg
-                                                class="w-8 h-8 text-primary"
-                                                xmlns="http://www.w3.org/2000/svg"
-                                                viewBox="0 0 24 24"
-                                                fill="none"
-                                                stroke="currentColor"
-                                                stroke-width="2"
-                                                stroke-linecap="round"
-                                                stroke-linejoin="round"
-                                                aria-label="Icône massage bien-être"
-                                            >
-                                                <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z" />
-                                                <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12" />
-                                            </svg>
-                                        )}
-                                        {service.icon === "users" && (
-                                            <svg
-                                                class="w-8 h-8 text-primary"
-                                                xmlns="http://www.w3.org/2000/svg"
-                                                viewBox="0 0 24 24"
-                                                fill="none"
-                                                stroke="currentColor"
-                                                stroke-width="2"
-                                                stroke-linecap="round"
-                                                stroke-linejoin="round"
-                                                aria-label="Icône accompagnement holistique"
-                                            >
-                                                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
-                                                <circle cx="9" cy="7" r="4" />
-                                                <path d="m22 21-2-2" />
-                                                <circle cx="16" cy="11" r="3" />
-                                            </svg>
-                                        )}
-                                    </div>
+                                    {service.icon === "enfant" && (
+                                        <Image
+                                            src={EnfantImg}
+                                            alt="Enfants heureux"
+                                            class="size-26 object-cover organic-shape mb-4 mx-auto"
+                                            loading="lazy"
+                                        />
+                                    )}
+                                    {service.icon === "adulte" && (
+                                        <Image
+                                            src={CFOImg}
+                                            alt="CFO poser les mains"
+                                            class="size-26 object-cover organic-shape mb-4 mx-auto"
+                                            loading="lazy"
+                                        />
+                                    )}
+                                    {service.icon === "detox" && (
+                                        <Image
+                                            src={DetoxImg}
+                                            alt="CFO poser les mains"
+                                            class="size-26 object-cover organic-shape mb-4 mx-auto"
+                                            loading="lazy"
+                                        />
+                                    )}
+                                    {service.icon === "cercle" && (
+                                        <Image
+                                            src={CercleImg}
+                                            alt="CFO poser les mains"
+                                            class="size-26 object-cover organic-shape mb-4 mx-auto"
+                                            loading="lazy"
+                                        />
+                                    )}
 
                                     <h3
                                         class="font-sans font-bold text-xl text-foreground mb-4"
@@ -239,32 +248,34 @@ const cancellationInfo = [
                                         </div>
 
                                         <div class="flex items-center justify-center space-x-3">
-                                            <div class="text-lg font-bold text-primary flex items-center justify-center">
-                                                <svg
-                                                    xmlns="http://www.w3.org/2000/svg"
-                                                    viewBox="0 0 3 2"
-                                                    class="size-6 mr-2"
-                                                >
-                                                    <rect
-                                                        width="1"
-                                                        height="2"
-                                                        fill="#002654"
-                                                    />
-                                                    <rect
-                                                        x="1"
-                                                        width="1"
-                                                        height="2"
-                                                        fill="#ffffff"
-                                                    />
-                                                    <rect
-                                                        x="2"
-                                                        width="1"
-                                                        height="2"
-                                                        fill="#ce1126"
-                                                    />
-                                                </svg>
-                                                {service.priceFrance}
-                                            </div>
+                                            {service.priceFrance && (
+                                                <div class="text-lg font-bold text-primary flex items-center justify-center">
+                                                    <svg
+                                                        xmlns="http://www.w3.org/2000/svg"
+                                                        viewBox="0 0 3 2"
+                                                        class="size-6 mr-2"
+                                                    >
+                                                        <rect
+                                                            width="1"
+                                                            height="2"
+                                                            fill="#002654"
+                                                        />
+                                                        <rect
+                                                            x="1"
+                                                            width="1"
+                                                            height="2"
+                                                            fill="#ffffff"
+                                                        />
+                                                        <rect
+                                                            x="2"
+                                                            width="1"
+                                                            height="2"
+                                                            fill="#ce1126"
+                                                        />
+                                                    </svg>
+                                                    {service.priceFrance}
+                                                </div>
+                                            )}
                                             <div class="w-px h-6 bg-border" />
                                             <div class="text-lg font-bold text-primary flex items-center">
                                                 <svg
@@ -296,13 +307,6 @@ const cancellationInfo = [
                                             </div>
                                         </div>
                                     </div>
-
-                                    <p
-                                        class="text-muted-foreground text-center mb-6 leading-relaxed font-sans"
-                                        itemprop="description"
-                                    >
-                                        {service.description}
-                                    </p>
 
                                     <ul class="space-y-3 text-left" role="list">
                                         {service.features.map(
@@ -338,7 +342,10 @@ const cancellationInfo = [
         </section>
 
         <!-- Packages Section -->
-        <section class="py-24 bg-white" aria-labelledby="packages-heading">
+        <section
+            class="py-24 bg-gradient-to-b from-background/30 to-card"
+            aria-labelledby="packages-heading"
+        >
             <div class="max-w-5xl mx-auto px-8 sm:px-12 lg:px-16">
                 <header class="text-center mb-12">
                     <h2

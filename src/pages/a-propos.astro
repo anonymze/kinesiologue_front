@@ -1,6 +1,6 @@
 ---
 import CharlottePeinteImg from "@/assets/images/charlotte-peintre.webp";
-import ConstellationImg from "@/assets/images/constell-1.webp";
+import ConstellationImg from "@/assets/images/constell-3.webp";
 import EkmaImg from "@/assets/images/ekma.webp";
 import Layout from "@/layouts/layout.astro";
 import { Image } from "astro:assets";
@@ -15,7 +15,7 @@ const qualifications = [
         link: "https://kinesiologie.fr",
     },
     {
-        title: "Constellation familiale",
+        title: "Constellation familiale sur l'eau",
         description: "En cours de formation",
         image: "constellation",
         alt: "Constellation sur une table de massage",
@@ -94,7 +94,8 @@ const qualifications = [
                         id="story-heading"
                         class="font-sans font-bold text-3xl md:text-4xl text-foreground leading-tight"
                     >
-                        L'éveil de ma mission sacrée
+                        Moi c’est Charlotte, je suis Kinésiologue certifiée de
+                        l’EKMA
                     </h2>
                 </header>
 
@@ -102,31 +103,42 @@ const qualifications = [
                     class="space-y-12 text-muted-foreground text-xl leading-relaxed font-sans"
                 >
                     <p>
-                        Je vous invite à découvrir mon parcours, une enfance
-                        bercée entre deux cultures, française et tunisienne, où
-                        le <strong
-                            >toucher est devenu un langage universel</strong
-                        >. Dès l'enfance, j'ai été sensible aux énergies
-                        subtiles, réalisant rapidement que nos mains étaient de
-                        véritables portails vers l'âme.
+                        Mon parcours vers la kinésiologie est le reflet d’un
+                        <strong>chemin personnel de guérison et de transformation</strong>. Ayant
+                        vécu différents traumatismes durant mon enfance, j’ai
+                        mis des protections en place qui m’ont coupées de tout
+                        ressenti. <br />
+                        J’ai découvert la kinésiologie il y a plusieurs années, et
+                        cela m’a aidé à me <strong>reconnecter à moi-même</strong>, à apprendre à
+                        m’aimer pleinement, et à libérer les blocages émotionnels
+                    </p>
+
+                    <p></p>
+
+                    <p>
+                        Après quelques années dans un univers exigent qui m’a
+                        aidé à en apprendre plus sur moi même, une pause
+                        imprévue m’a aidé à repenser mon parcours. C’est ainsi
+                        que j’ai suivi une formation à l’EKMA pour me consacrer
+                        à l’accompagnement de l’humain.
+                        <br>
                     </p>
 
                     <p>
-                        En 2011, mon chemin m'a guidée vers <strong
-                            >l'École Florac à Paris</strong
-                        > pour une formation transformatrice de deux ans sous la
-                        guidance de Frédéric Rouille, un maître inspirant dans l'art
-                        du massage bien-être. Sa sagesse bienveillante et sa créativité
-                        ont façonné mon approche holistique.
+                        Aujourd’hui, j’accompagne des personnes de tout âge,
+                        des bébés aux séniors, en passant par les femmes
+                        enceintes ou ceux qui cherchent à <strong>surmonter des épreuves
+                        et à retrouver l’équilibre</strong>. Je suis là pour vous
+                        accompagner avec bienveillance et compréhension.
                     </p>
 
                     <p>
-                        Au fil de ces années sacrées, j'ai exploré une multitude
-                        de <em>techniques ancestrales</em> : des pierres chaudes
-                        au lomi lomi, en passant par le massage drainant, deep tissue,
-                        ayurvédique, réflexologie plantaire, oriental, à l'huile
-                        d'argan, et bien d'autres trésors. Chaque technique m'a révélé
-                        une nouvelle dimension de l'être.
+                        Je crois profondément que chacun de nous mérite de
+                        s’aimer pleinement, de faire des choix en accord avec
+                        son être intérieur et de retrouver un équilibre entre
+                        corps et esprit. Si vous êtes prêts à entamer ce chemin
+                        de transformation, je serais honorée de marcher à vos
+                        côtés.
                     </p>
                 </div>
             </div>
@@ -165,23 +177,23 @@ const qualifications = [
                             >
                                 <div class="p-12 text-center">
                                     <div class="flex items-center">
-                                    {qualification.image === "ekma" && (
-                                        <Image
-                                            src={EkmaImg}
-                                            alt={qualification.alt}
-                                            class={
-                                                "mx-auto object-cover mb-3 h-30 w-60"
-                                            }
-                                        />
-                                    )}
-                                    {qualification.image ===
-                                        "constellation" && (
-                                        <Image
-                                            src={ConstellationImg}
-                                            alt={qualification.alt}
-                                            class="size-30 object-cover rounded-full mb-3 h-30 mx-auto"
-                                        />
-                                    )}
+                                        {qualification.image === "ekma" && (
+                                            <Image
+                                                src={EkmaImg}
+                                                alt={qualification.alt}
+                                                class={
+                                                    "mx-auto object-cover mb-3 h-40 w-80"
+                                                }
+                                            />
+                                        )}
+                                        {qualification.image ===
+                                            "constellation" && (
+                                            <Image
+                                                src={ConstellationImg}
+                                                alt={qualification.alt}
+                                                class="size-40 object-cover rounded-full mb-3 mx-auto background-center"
+                                            />
+                                        )}
                                     </div>
 
                                     <h3

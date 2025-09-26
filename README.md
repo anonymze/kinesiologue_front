@@ -41,3 +41,18 @@ All commands are run from the root of the project, from a terminal:
 ## 👀 Want to learn more?
 
 Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+
+
+ajouter les réseaux sociaux dans le bas de page (facebook, instagram) corps_harmonie
+https://www.facebook.com/profile.php?id=100089654230930
+avis google reprendre https://audreycatherine-kinesiologue.fr/
+
+
+badge presentalitenn et en ligne sur page d'accueil et tarifs
+
+
+badge evenement pour cercle des femmes
+
+section carte cadeaux page tarifs
+
+scroll calendly
