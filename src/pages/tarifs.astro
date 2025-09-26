@@ -76,6 +76,7 @@ const services = [
             "Honorer sa féminité",
         ],
         icon: "cercle",
+        bannier: "event",
     },
     {
         title: "Constellation sur l'eau",
@@ -85,6 +86,7 @@ const services = [
         description: "",
         features: ["En cours de formation..."],
         icon: "constellation",
+        bannier: "online",
     },
 ];
 
@@ -177,11 +179,27 @@ const cancellationInfo = [
                     {
                         services.map((service) => (
                             <article
-                                class="border border-border/20 rounded-3xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 bg-card/60 backdrop-blur-lg"
+                                class="border border-border/20 rounded-3xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 bg-card/60 backdrop-blur-lg relative overflow-hidden"
                                 itemscope
                                 itemtype="https://schema.org/Service"
                             >
-                                <div class="p-8 text-center">
+                                <div class="p-8 text-center ">
+                                    {service.bannier && (
+                                        <>
+                                            {service.bannier === "online" ? (
+                                                <div class="absolute bg-secondary text-white px-6 py-2 text-xs font-semibold uppercase tracking-wider transform rotate-45 origin-center w-36 text-center top-4 right-[-38px] shadow-lg z-10">
+                                                    <>En ligne</>
+                                                </div>
+                                            ) : (
+                                                <div class="absolute bg-secondary text-white px-6 py-2 text-xs font-semibold uppercase tracking-wider transform rotate-45 origin-center w-40 text-center top-4 right-[-40px] shadow-lg z-10">
+                                                    Évènement <br />
+                                                    <span class="text-[10px]">
+                                                        tous les mois
+                                                    </span>
+                                                </div>
+                                            )}
+                                        </>
+                                    )}
                                     {service.icon === "enfant" && (
                                         <Image
                                             src={EnfantImg}

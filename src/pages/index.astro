@@ -18,7 +18,7 @@ const services = [
         title: "Kinésiologie",
         description: "Retrouver l'harmonie du corps",
         keywords:
-            "Libération émotionnelle, Gestion du stress (angoisses; burn out; doutes; peurs...), Comprendre les addictions, Soigner les maux du corps (et non les maladies), Rétablir la concentration et l'apprentissage",
+            "Libération émotionnelle, Gestion du stress (angoisses / burn out / doutes / peurs...), Comprendre les addictions, Soigner les maux du corps (et non les maladies), Rétablir la concentration et l'apprentissage",
         more: true,
     },
     {
@@ -34,6 +34,7 @@ const services = [
         title: "Constellation familiale sur l'eau",
         description: "Formation en cours d'acquisition",
         keywords: "",
+        bannier: "En ligne"
     },
 ];
 
@@ -228,13 +229,18 @@ const testimonials = [
                     </p>
                 </header>
 
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
                     {
                         services.map((service, index) => (
                             <article
-                                class="group hover:shadow-2xl transition-all duration-300 border border-border/20 rounded-2xl overflow-hidden hover:-translate-y-6 bg-card/60 backdrop-blur-lg"
+                                class="group hover:shadow-2xl transition-all duration-300 border border-border/20 rounded-2xl overflow-hidden hover:-translate-y-6 bg-card/60 backdrop-blur-lg relative"
                                 aria-labelledby={`service-${index}-title`}
                             >
+                                {service.bannier && (
+                                    <div class="absolute bg-secondary text-white px-6 py-2 text-xs font-semibold uppercase tracking-wider transform rotate-45 origin-center w-36 text-center top-4 right-[-38px] shadow-lg z-10">
+                                        {service.bannier}
+                                    </div>
+                                )}
                                 <div class="p-9 text-center flex flex-col h-full">
                                     {service.icon === "heart" && (
                                         <Image
