@@ -5,8 +5,8 @@ import { businessInfo } from "@/utils/helper";
 import { Image } from "astro:assets";
 import { Calendar1Icon } from "lucide-react";
 
-// Get current page path
-const currentPath = Astro.url.pathname;
+// Get current page path and normalize it
+const currentPath = Astro.url.pathname.replace(/\/$/, '') || '/';
 
 // SEO-optimized navigation items with descriptive titles
 const navItems = [
@@ -77,7 +77,8 @@ const navItems = [
                 <nav class="hidden md:flex items-center" role="navigation" aria-label="Menu principal">
                     <ul class="flex items-center space-x-8 list-none m-0 p-0">
                         {navItems.map((item) => {
-                            const isActive = item.href === currentPath;
+                            const normalizedHref = item.href.replace(/\/$/, '') || '/';
+                            const isActive = normalizedHref === currentPath;
                             return (
                                 <li>
                                     <a
