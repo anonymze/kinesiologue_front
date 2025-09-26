@@ -56,3 +56,5 @@ badge evenement pour cercle des femmes
 section carte cadeaux page tarifs
 
 scroll calendly
+
+presentation dashboard
