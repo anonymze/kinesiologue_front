@@ -49,5 +49,3 @@ avis google reprendre https://audreycatherine-kinesiologue.fr/
 
 
 section carte cadeaux page tarifs
-
-réseaux sociaux footer

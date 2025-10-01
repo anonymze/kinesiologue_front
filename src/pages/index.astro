@@ -1,4 +1,7 @@
 ---
+import JuliaImg from "@/assets/images/julia.png";
+import VirginieImg from "@/assets/images/virginie.png";
+import DianeImg from "@/assets/images/diane.png";
 import KinesiologieImg from "@/assets/images/cabinet-2.webp";
 import CercleImg from "@/assets/images/cercle-1.webp";
 import CharlotteSunImg from "@/assets/images/charlotte-sun.webp";
@@ -11,7 +14,7 @@ import WaterPeaceImg from "@/assets/images/water-peace.webp";
 import Layout from "@/layouts/layout.astro";
 import { businessInfo } from "@/utils/helper";
 import { Image } from "astro:assets";
-import { HeartIcon } from "lucide-react";
+import { HeartIcon, StarIcon } from "lucide-react";
 
 // Services with SEO-optimized content
 const services = [
@@ -43,19 +46,19 @@ const services = [
 // Testimonials with client consent and authenticity
 const testimonials = [
     {
-        text: "J'ai consultée Charlotte récemment et j’ai vraiment adoré l’expérience. Elle est douce, à l’écoute et prend le temps de comprendre mes besoins. Je me suis sentie tout de suite à l’aise et ses séances m’ont fais un bien fou. Merci encore Charlotte, je reviendrai sans hésiter ! ✨",
-        author: "Caroline M.",
-        service: "Kinésiologie",
+        text: "C’est un plaisir de partager mon expérience avec Charlotte – une rencontre remarquable et enrichissante. Son approche, à la fois sereine et bienveillante, m’a profondément marquée.",
+        author: "Julia M.",
+        image: "julia",
     },
     {
-        text: "Charlotte a reçu ma fille de 10 ans pour une séance de kinesiologie. Elle est ressortie pleine d'énergie avec des petites solutions pour différentes situations compliquées. Ses explications étaient claires et adaptées, je recommande vivement.",
-        author: "Julie G.",
-        service: "Kinésiologie",
+        text: "Un grand merci à Charlotte pour son professionnalisme, sa douceur et sa bienveillance. La kinésiologie m’a complètement aidé à sortir de schémas, à me re-programmer pour accueillir pleinement la personne que je suis aujourd’hui.",
+        author: "Virginie M.",
+        image: "virginie",
     },
     {
-        text: "La séance avec Charlotte a démarré par un accueil chaleureux. Elle a su m'apporter des clefs de compréhension et le soutien dont j'avais besoin en faisant preuve d'une écoute bienveillante. Charlotte pratique la kinésiologie avec douceur et précision. Je recommande totalement !",
-        author: "Joséphine C.",
-        service: "Kinésiologie",
+        text: "Charlotte est très accueillante elle a su mettre mon enfant à l’aise tout de suite. Sa concentration est en progression constante, c’est bluffant en une semaine. Je la recommande vivement 👍🏾",
+        author: "Diane N.",
+        image: "diane",
     },
 ];
 ---
@@ -411,14 +414,85 @@ const testimonials = [
                 <header class="text-center mb-14">
                     <h2
                         id="testimonials-heading"
-                        class="font-sans font-bold text-4xl md:text-5xl text-foreground mb-6"
+                        class="font-sans font-bold text-4xl md:text-5xl text-foreground mb-4"
                     >
-                        Témoignages authentiques de mes clients
+                        Les avis de mes clients
                     </h2>
-                    <p class="text-muted-foreground text-xl font-sans">
-                        Les retours des personnes qui ont retrouvé leur chemin
-                        vers <strong>l'harmonie</strong>.
-                    </p>
+                    <div
+                        class="text-muted-foreground text-xl font-sans mb-4 flex items-center justify-center gap-3"
+                    >
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="33.667"
+                            height="34.351"
+                            viewBox="0 0 33.667 34.351"
+                            ><defs
+                                ><style>
+                                    .a {
+                                        fill: #4285f4;
+                                    }
+                                    .b {
+                                        fill: #34a853;
+                                    }
+                                    .c {
+                                        fill: #fbbc04;
+                                    }
+                                    .d {
+                                        fill: #ea4335;
+                                    }
+                                </style></defs
+                            ><g transform="translate(-191.036 -12.667)"
+                                ><g transform="translate(191.036 12.667)"
+                                    ><path
+                                        class="a"
+                                        d="M205.591,9.669a20.5,20.5,0,0,0-.293-3.491H189.1v6.61h9.274a7.974,7.974,0,0,1-3.433,5.223V22.3h5.532a16.761,16.761,0,0,0,5.119-12.629Z"
+                                        transform="translate(-171.924 7.902)"
+                                    ></path><path
+                                        class="b"
+                                        d="M201.513,21.284a16.434,16.434,0,0,0,11.384-4.15l-5.537-4.287A10.416,10.416,0,0,1,191.877,7.4h-5.71v4.423A17.176,17.176,0,0,0,201.513,21.284Z"
+                                        transform="translate(-184.338 13.068)"
+                                    ></path><path
+                                        class="c"
+                                        d="M193.346,16.293a10.314,10.314,0,0,1,0-6.574V5.3h-5.7a17.161,17.161,0,0,0,0,15.419Z"
+                                        transform="translate(-185.818 4.172)"
+                                    ></path><path
+                                        class="d"
+                                        d="M201.513,10.288a9.287,9.287,0,0,1,6.584,2.575l4.9-4.9a16.515,16.515,0,0,0-11.488-4.47,17.161,17.161,0,0,0-15.346,9.468l5.7,4.423A10.278,10.278,0,0,1,201.513,10.288Z"
+                                        transform="translate(-184.338 -3.488)"
+                                    ></path></g
+                                ></g
+                            ></svg
+                        >
+                        <p>
+                            Avis <strong class="ml-0.5">Google</strong>
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-4 justify-center">
+                        <span class="font-semibold">Note globale</span>
+                        <div class="flex gap-1 items-center">
+                            <StarIcon
+                                className="size-6 fill-amber-300 text-yellow-400"
+                            />
+                            <StarIcon
+                                className="size-6 fill-amber-300 text-yellow-400"
+                            />
+                            <StarIcon
+                                className="size-6 fill-amber-300 text-yellow-400"
+                            />
+                            <StarIcon
+                                className="size-6 fill-amber-300 text-yellow-400"
+                            />
+                            <StarIcon
+                                className="size-6 fill-amber-300 text-yellow-400"
+                            />
+                        </div>
+                        <div class="flex items-center">
+                            <span class="font-bold text-3xl text-amber-300"
+                                >5</span
+                            >
+                            <span class="ml-5">60+ avis</span>
+                        </div>
+                    </div>
                 </header>
 
                 <div
@@ -440,19 +514,44 @@ const testimonials = [
                                         "{testimonial.text}"
                                     </blockquote>
 
-                                    <footer class="space-y-2 mt-auto">
-                                        <cite
-                                            class="font-medium text-foreground text-lg font-sans not-italic"
-                                            itemprop="author"
-                                        >
-                                            {testimonial.author}
-                                        </cite>
-                                        <div class="text-sm text-muted-foreground">
-                                            •
-                                            <span itemprop="itemReviewed">
-                                                {testimonial.service}
-                                            </span>
+                                    <footer class="mt-auto flex justify-between items-center">
+                                        <div>
+                                            <cite
+                                                class="font-medium text-foreground text-md font-sans not-italic"
+                                                itemprop="author"
+                                            >
+                                                {testimonial.author}
+                                            </cite>
+                                            <div class="text-xs text-muted-foreground italic">
+                                                12/12/2025
+                                            </div>
+                                            <div class="flex gap-1 mt-1">
+                                                <StarIcon className="size-4 fill-amber-300 text-yellow-400" />
+                                                <StarIcon className="size-4 fill-amber-300 text-yellow-400" />
+                                                <StarIcon className="size-4 fill-amber-300 text-yellow-400" />
+                                                <StarIcon className="size-4 fill-amber-300 text-yellow-400" />
+                                                <StarIcon className="size-4 fill-amber-300 text-yellow-400" />
+                                            </div>
                                         </div>
+                                        {testimonial.image === "diane" ? (
+                                            <Image
+                                                src={DianeImg}
+                                                alt="Image google de Diane"
+                                                class="w-12 h-12 rounded-full"
+                                            />
+                                        ) : testimonial.image === "virginie" ? (
+                                            <Image
+                                                src={VirginieImg}
+                                                alt="Image google de Virginie"
+                                                class="w-12 h-12 rounded-full"
+                                            />
+                                        ) : (
+                                            <Image
+                                                src={JuliaImg}
+                                                alt="Image google de Julie"
+                                                class="w-12 h-12 rounded-full"
+                                            />
+                                        )}
                                     </footer>
                                 </div>
                             </article>
