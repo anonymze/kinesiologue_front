@@ -49,16 +49,19 @@ const testimonials = [
         text: "C’est un plaisir de partager mon expérience avec Charlotte – une rencontre remarquable et enrichissante. Son approche, à la fois sereine et bienveillante, m’a profondément marquée.",
         author: "Julia M.",
         image: "julia",
+        date: "02/03/2025",
     },
     {
         text: "Un grand merci à Charlotte pour son professionnalisme, sa douceur et sa bienveillance. La kinésiologie m’a complètement aidé à sortir de schémas, à me re-programmer pour accueillir pleinement la personne que je suis aujourd’hui.",
         author: "Virginie M.",
         image: "virginie",
+        date: "20/05/2025",
     },
     {
         text: "Charlotte est très accueillante elle a su mettre mon enfant à l’aise tout de suite. Sa concentration est en progression constante, c’est bluffant en une semaine. Je la recommande vivement 👍🏾",
         author: "Diane N.",
         image: "diane",
+        date: "15/02/2025",
     },
 ];
 ---
@@ -523,7 +526,7 @@ const testimonials = [
                                                 {testimonial.author}
                                             </cite>
                                             <div class="text-xs text-muted-foreground italic">
-                                                12/12/2025
+                                                {testimonial.date}
                                             </div>
                                             <div class="flex gap-1 mt-1">
                                                 <StarIcon className="size-4 fill-amber-300 text-yellow-400" />
