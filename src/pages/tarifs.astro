@@ -187,9 +187,12 @@ const cancellationInfo = [
                                     {service.bannier && (
                                         <>
                                             {service.bannier === "online" ? (
-                                                <div class="absolute bg-secondary text-white px-6 py-2 text-xs font-semibold uppercase tracking-wider transform rotate-45 origin-center w-36 text-center top-4 right-[-38px] shadow-lg z-10">
-                                                    <>En ligne</>
-                                                </div>
+                                            <div class="absolute bg-secondary text-white px-6 py-2 text-xs font-semibold uppercase tracking-wider transform rotate-45 origin-center w-40 text-center top-4 right-[-40px] shadow-lg z-10">
+                                                En ligne <br />
+                                                <span class="text-[10px]">
+                                                    et en présentiel
+                                                </span>
+                                            </div>
                                             ) : (
                                                 <div class="absolute bg-secondary text-white px-6 py-2 text-xs font-semibold uppercase tracking-wider transform rotate-45 origin-center w-40 text-center top-4 right-[-40px] shadow-lg z-10">
                                                     Évènement <br />
