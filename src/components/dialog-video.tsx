@@ -18,11 +18,11 @@ export default function DialogVideo() {
         </DialogHeader>
         <iframe
           className="aspect-video transition-opacity duration-800 starting:opacity-0 rounded-md"
-          src="https://youtube.com/shorts/ebvaJ7lwiPw"
-          title="Présentation cercle de femmes en vidéo"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen"
-          allowFullScreen
+          src="https://www.youtube.com/embed/ebvaJ7lwiPw"
+          title="Cercle de femmes avec Charlotte Drouilly"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           referrerPolicy="strict-origin-when-cross-origin"
+          allowFullScreen
         ></iframe>
       </DialogContent>
     </Dialog>
