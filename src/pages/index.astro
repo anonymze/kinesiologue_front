@@ -1,24 +1,44 @@
 ---
-import JuliaImg from "@/assets/images/julia.png";
-import VirginieImg from "@/assets/images/virginie.png";
-import DianeImg from "@/assets/images/diane.png";
 import KinesiologieImg from "@/assets/images/cabinet-2.webp";
-import CercleImg from "@/assets/images/cercle-1.webp";
 import CharlotteSunImg from "@/assets/images/charlotte-sun.webp";
 import ConstellImg from "@/assets/images/constell-3.webp";
-import PaysageImg from "@/assets/images/paysage.webp";
 import DetoxImg from "@/assets/images/detox.webp";
+import DianeImg from "@/assets/images/diane.png";
 import forestImg from "@/assets/images/forest.webp";
+import JuliaImg from "@/assets/images/julia.png";
 import LogoImg from "@/assets/images/logo_blanc.webp";
 import QrcodeImg from "@/assets/images/qrcode.webp";
+import VirginieImg from "@/assets/images/virginie.png";
 import WaterPeaceImg from "@/assets/images/water-peace.webp";
+import DialogVideo from "@/components/dialog-video";
 import Layout from "@/layouts/layout.astro";
 import { businessInfo } from "@/utils/helper";
 import { Image } from "astro:assets";
 import { HeartIcon, StarIcon } from "lucide-react";
-import DialogVideo from "@/components/dialog-video";
 
-const response = await fetch("https://kinesiologue-back.vercel.app/api/globals/hours");
+const cercle: {
+    flyer: {
+        id: string;
+        blurhash?: string | null;
+        updatedAt: string;
+        createdAt: string;
+        url?: string | null;
+        thumbnailURL?: string | null;
+        filename?: string | null;
+        mimeType?: string | null;
+        filesize?: number | null;
+        width?: number | null;
+        height?: number | null;
+        focalX?: number | null;
+        focalY?: number | null;
+    };
+} = await (
+    await fetch("https://kinesiologue-back.vercel.app/api/globals/cercle")
+).json();
+
+console.log("")
+console.log("https://kinesiologue-back.vercel.app" +
+  cercle.flyer.url)
 
 // Services with SEO-optimized content
 const services = [
@@ -266,8 +286,13 @@ const testimonials = [
 
                     <div class="relative w-full max-w-155 max-h-160 mx-auto">
                         <Image
-                            src={CercleImg}
-                            alt="Qrcode compte instagram"
+                            src={cercle?.flyer.url
+                                ? "https://kinesiologue-back.vercel.app" +
+                                  cercle.flyer.url
+                                : "https://placehold.co/600x600"}
+                            width={620}
+                            height={640}
+                            alt="Affiche rencontre cercle de femmes"
                             class="object-cover"
                             loading="lazy"
                             class="w-full max-w-155 max-h-160 object-cover mx-auto rounded-lg"
@@ -292,7 +317,7 @@ const testimonials = [
                         <div
                             class="flex items-center justify-center gap-6 flex-col md:flex-row"
                         >
-                            <DialogVideo client:visible  />
+                            <DialogVideo client:visible />
                             <a
                                 href="/tarifs#cercle"
                                 class="w-fit bg-primary hover:bg-primary/90 text-primary-foreground rounded-full px-10 py-3 text-lg shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-102 font-sans focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2"

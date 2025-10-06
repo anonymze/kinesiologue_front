@@ -8,7 +8,7 @@ const hours: {
     updatedAt: string;
     createdAt: string;
     globalType: "hours";
-} = await fetch("https://kinesiologue-back.vercel.app/api/globals/hours");
+} = await (await fetch("https://kinesiologue-back.vercel.app/api/globals/hours")).json();
 
 // Page SEO data
 const pageData = {
@@ -250,7 +250,7 @@ const cabinetLocations = [
                                                     </svg>
                                                 )}
                                             </div>
-                                            <p class="text-muted-foreground">
+                                            <p class="text-muted-foreground break-all">
                                                 {info.value}
                                             </p>
                                             <p class="text-sm text-muted-foreground mt-1">
