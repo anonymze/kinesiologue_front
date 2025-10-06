@@ -9,6 +9,7 @@ import react from "@astrojs/react";
 // https://astro.build/config
 export default defineConfig({
   site: "https://kinesiologue-charlotte.ch",
+  // prefetch: true,
   // experimental: {
   //   fonts: [
   //     {

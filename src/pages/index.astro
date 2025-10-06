@@ -18,6 +18,8 @@ import { Image } from "astro:assets";
 import { HeartIcon, StarIcon } from "lucide-react";
 import DialogVideo from "@/components/dialog-video";
 
+const response = await fetch("https://kinesiologue-back.vercel.app/api/globals/hours");
+
 // Services with SEO-optimized content
 const services = [
     {

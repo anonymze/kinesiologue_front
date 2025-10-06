@@ -1,6 +1,15 @@
 ---
 import Layout from "@/layouts/layout.astro";
 
+const hours: {
+    id: string;
+    main: string;
+    secondary?: string;
+    updatedAt: string;
+    createdAt: string;
+    globalType: "hours";
+} = await fetch("https://kinesiologue-back.vercel.app/api/globals/hours");
+
 // Page SEO data
 const pageData = {
     title: "Contact",
@@ -15,8 +24,8 @@ const contactInfo = [
     {
         icon: "clock",
         title: "Horaires",
-        value: "Lundi - Vendredi : 9h - 19h",
-        subtitle: "Samedi : 9h - 17h • Dimanche : Fermé",
+        value: hours.main,
+        subtitle: hours.secondary ?? undefined,
     },
     {
         icon: "mail",
