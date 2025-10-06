@@ -18,7 +18,7 @@ export default function DialogVideo() {
         </DialogHeader>
         <iframe
           className="aspect-video transition-opacity duration-800 starting:opacity-0 rounded-md"
-          src="https://www.youtube.com/embed/QukeNFtunXs"
+          src="https://youtube.com/shorts/ebvaJ7lwiPw"
           title="Présentation cercle de femmes en vidéo"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen"
           allowFullScreen
