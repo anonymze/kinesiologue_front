@@ -1,6 +1,7 @@
 ---
 import CercleImg from "@/assets/images/cercle.webp";
 import CFOImg from "@/assets/images/cfo.webp";
+import ConstellImg from "@/assets/images/constell-3.webp";
 import DetoxImg from "@/assets/images/detox.webp";
 import EnfantImg from "@/assets/images/enfant.webp";
 import Layout from "@/layouts/layout.astro";
@@ -10,9 +11,9 @@ import { Image } from "astro:assets";
 const pageData = {
     title: "Tarifs",
     description:
-        "Découvrez les tarifs transparents de Charlotte Drouilly, kinésiologue en Suisse. Séances de kinésiologie, massages bien-être et forfaits avantageux.",
+        "Découvrez les tarifs transparents de Charlotte Drouilly, kinésiologue à Annemasse. Séances de kinésiologie, détoxination énergétique et constellation familiale.",
     keywords:
-        "tarifs kinésiologie Suisse, prix séance kinésiologie Genève, cercle de femmes tarifs, consultation kinésiologue prix Charlotte Drouilly",
+        "tarifs kinésiologie Annemasse, prix séance kinésiologie Haute-Savoie, cercle de femmes tarifs, consultation kinésiologue prix Charlotte Drouilly",
 };
 
 // Services with dual pricing
@@ -21,7 +22,6 @@ const services = [
         title: "Séance de Kinésiologie ENFANT (jusqu'à 11 ans)",
         duration: "45 min.",
         priceFrance: "60 €",
-        priceSuisse: "90 CHF",
         description: "",
         features: [
             "Sommeil difficile",
@@ -36,7 +36,6 @@ const services = [
         title: "Séance de Kinésiologie ADULTE",
         duration: "1h",
         priceFrance: "70 €",
-        priceSuisse: "100 CHF",
         description: "",
         features: [
             "Libération émotionnelle",
@@ -52,7 +51,6 @@ const services = [
         title: "Détoxination énergétique",
         duration: "1h30",
         priceFrance: "80 €",
-        priceSuisse: "120 CHF",
         description: "",
         features: [
             "Poils d'animaux",
@@ -65,8 +63,7 @@ const services = [
     {
         title: "Cercle de femmes",
         duration: "2h",
-        // priceFrance: "65 €",
-        priceSuisse: "60 CHF",
+        priceFrance: "60 €",
         description: "",
         features: [
             "Un point entre femmes",
@@ -80,11 +77,14 @@ const services = [
     },
     {
         title: "Constellation sur l'eau",
-        duration: "...",
-        priceFrance: "... €",
-        priceSuisse: "... CHF",
+        duration: "1h",
+        priceFrance: "80 €",
         description: "",
-        features: ["En cours de formation..."],
+        features: [
+            "Libérer les blocages familiaux",
+            "Mettre en lumière les liens transgénérationnels",
+            "Apaiser les tensions intérieures",
+        ],
         icon: "constellation",
         bannier: "online",
     },
@@ -164,11 +164,8 @@ const cancellationInfo = [
                                 <p
                                     class="text-amber-700 text-sm leading-relaxed"
                                 >
-                                    <strong>Remboursement :</strong> Pas encore membre
-                                    des réseaux ASCA / RME. <br />
-                                    Les mutuelles françaises ne prennent pas en charge
-                                    mes consultations, que vous soyez frontalier
-                                    ou résident en France.
+                                    <strong>Remboursement :</strong> Les mutuelles
+                                    françaises ne prennent pas en charge mes consultations.
                                 </p>
                             </div>
                         </div>
@@ -188,9 +185,9 @@ const cancellationInfo = [
                                         <>
                                             {service.bannier === "online" ? (
                                             <div class="absolute bg-secondary text-white px-6 py-2 text-xs font-semibold uppercase tracking-wider transform rotate-45 origin-center w-40 text-center top-4 right-[-40px] shadow-lg z-10">
-                                                En ligne <br />
+                                                Uniquement <br />
                                                 <span class="text-[10px]">
-                                                    ou en présentiel
+                                                    en visio
                                                 </span>
                                             </div>
                                             ) : (
@@ -235,6 +232,14 @@ const cancellationInfo = [
                                             loading="lazy"
                                         />
                                     )}
+                                    {service.icon === "constellation" && (
+                                        <Image
+                                            src={ConstellImg}
+                                            alt="Constellation sur une table de massage"
+                                            class="size-26 object-cover organic-shape mb-4 mx-auto"
+                                            loading="lazy"
+                                        />
+                                    )}
 
                                     <h3
                                         class="font-sans font-bold text-xl text-foreground mb-4"
@@ -268,65 +273,11 @@ const cancellationInfo = [
                                             </span>
                                         </div>
 
-                                        <div class="flex items-center justify-center space-x-3">
-                                            {service.priceFrance && (
-                                                <div class="text-lg font-bold text-primary flex items-center justify-center">
-                                                    <svg
-                                                        xmlns="http://www.w3.org/2000/svg"
-                                                        viewBox="0 0 3 2"
-                                                        class="size-6 mr-2"
-                                                    >
-                                                        <rect
-                                                            width="1"
-                                                            height="2"
-                                                            fill="#002654"
-                                                        />
-                                                        <rect
-                                                            x="1"
-                                                            width="1"
-                                                            height="2"
-                                                            fill="#ffffff"
-                                                        />
-                                                        <rect
-                                                            x="2"
-                                                            width="1"
-                                                            height="2"
-                                                            fill="#ce1126"
-                                                        />
-                                                    </svg>
-                                                    {service.priceFrance}
-                                                </div>
-                                            )}
-                                            <div class="w-px h-6 bg-border" />
-                                            <div class="text-lg font-bold text-primary flex items-center">
-                                                <svg
-                                                    xmlns="http://www.w3.org/2000/svg"
-                                                    viewBox="0 0 3 2"
-                                                    class="size-5 mr-2 mb-0.5"
-                                                >
-                                                    <rect
-                                                        width="3"
-                                                        height="5"
-                                                        fill="#dc143c"
-                                                    />
-                                                    <rect
-                                                        x="1.25"
-                                                        y="0.2"
-                                                        width="0.5"
-                                                        height="2"
-                                                        fill="#ffffff"
-                                                    />
-                                                    <rect
-                                                        x="0.375"
-                                                        y="0.95"
-                                                        width="2.25"
-                                                        height="0.5"
-                                                        fill="#ffffff"
-                                                    />
-                                                </svg>
-                                                {service.priceSuisse}
+                                        {service.priceFrance && (
+                                            <div class="text-lg font-bold text-primary flex items-center justify-center">
+                                                {service.priceFrance}
                                             </div>
-                                        </div>
+                                        )}
                                     </div>
 
                                     <ul class="space-y-3 text-left" role="list">

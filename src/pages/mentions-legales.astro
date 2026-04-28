@@ -1,0 +1,250 @@
+---
+import Layout from "@/layouts/layout.astro";
+
+const pageData = {
+    title: "Mentions légales",
+    description:
+        "Mentions légales du site de Charlotte Drouilly, kinésiologue à Annemasse. Éditeur, hébergeur, assurance professionnelle et qualifications.",
+    keywords:
+        "mentions légales Charlotte Drouilly, kinésiologue Annemasse, éditeur site kinésiologie",
+};
+
+const updatedAt = "28 avril 2026";
+---
+
+<Layout
+    title={pageData.title}
+    description={pageData.description}
+    keywords={pageData.keywords}
+    type="website"
+>
+    <main role="main">
+        <section
+            class="py-24 bg-gradient-to-b from-card/60 to-background/30"
+            aria-labelledby="mentions-heading"
+        >
+            <div class="max-w-4xl mx-auto px-8 sm:px-12 lg:px-16">
+                <header class="mb-12">
+                    <h1
+                        id="mentions-heading"
+                        class="font-sans font-bold text-4xl md:text-5xl text-foreground mb-4 leading-tight"
+                    >
+                        Mentions légales
+                    </h1>
+                    <p class="text-muted-foreground text-sm">
+                        Dernière mise à jour : {updatedAt}
+                    </p>
+                </header>
+
+                <article
+                    class="prose-legal space-y-10 text-foreground leading-relaxed"
+                >
+                    <section>
+                        <h2 class="font-bold text-2xl mb-4">
+                            1. Éditeur du site
+                        </h2>
+                        <p class="mb-3">
+                            Le site <strong
+                                >kinesiologue-charlotte.ch</strong
+                            > est édité par :
+                        </p>
+                        <ul class="list-disc pl-6 space-y-2">
+                            <li>
+                                <strong>Nom commercial :</strong> Charlotte Drouilly
+                                Kinésiologue
+                            </li>
+                            <li>
+                                <strong>Dénomination :</strong> DROUILLY CHARLOTTE
+                            </li>
+                            <li>
+                                <strong>Forme juridique :</strong> Auto-entrepreneur
+                                (micro-entreprise)
+                            </li>
+                            <li>
+                                <strong>Représentant légal :</strong> Charlotte Drouilly
+                            </li>
+                            <li>
+                                <strong>Adresse :</strong> 8 rue des Tournelles, 74100
+                                Annemasse, France
+                            </li>
+                            <li>
+                                <strong>Téléphone :</strong>
+                                <a
+                                    href="tel:+33617972192"
+                                    class="text-primary hover:underline"
+                                    >06 17 97 21 92</a
+                                >
+                            </li>
+                            <li>
+                                <strong>Email :</strong>
+                                <a
+                                    href="mailto:charlottedrouilly.kinesiologue@gmail.com"
+                                    class="text-primary hover:underline break-all"
+                                    >charlottedrouilly.kinesiologue@gmail.com</a
+                                >
+                            </li>
+                            <li>
+                                <strong>SIREN :</strong> [SIREN à compléter]
+                            </li>
+                            <li>
+                                <strong>SIRET :</strong> [SIRET à compléter]
+                            </li>
+                            <li>
+                                <strong>Code APE / NAF :</strong> [Code APE à compléter]
+                            </li>
+                            <li>
+                                <strong>Date de création :</strong> [Date à compléter]
+                            </li>
+                            <li>
+                                <strong>N° TVA intracommunautaire :</strong> TVA
+                                non applicable, art. 293 B du CGI (régime de franchise
+                                en base)
+                            </li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h2 class="font-bold text-2xl mb-4">
+                            2. Directeur de la publication
+                        </h2>
+                        <p>
+                            Charlotte Drouilly, en qualité de représentante de
+                            l'activité.
+                        </p>
+                    </section>
+
+                    <section>
+                        <h2 class="font-bold text-2xl mb-4">3. Hébergeur</h2>
+                        <p>
+                            Le site est hébergé par <strong>Vercel Inc.</strong
+                            ><br />
+                            440 N Barranca Ave #4133, Covina, CA 91723, États-Unis<br
+                            />
+                            Site web :
+                            <a
+                                href="https://vercel.com"
+                                rel="noopener noreferrer"
+                                target="_blank"
+                                class="text-primary hover:underline"
+                                >https://vercel.com</a
+                            >
+                        </p>
+                    </section>
+
+                    <section>
+                        <h2 class="font-bold text-2xl mb-4">
+                            4. Assurance professionnelle
+                        </h2>
+                        <p>
+                            Charlotte Drouilly est couverte par une assurance
+                            responsabilité civile professionnelle :
+                        </p>
+                        <ul class="list-disc pl-6 space-y-2 mt-3">
+                            <li>
+                                <strong>Assureur :</strong> [Assureur à compléter]
+                            </li>
+                            <li>
+                                <strong>N° de police :</strong> [N° à compléter]
+                            </li>
+                            <li>
+                                <strong>Zone de couverture :</strong> France
+                            </li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h2 class="font-bold text-2xl mb-4">
+                            5. Qualifications professionnelles
+                        </h2>
+                        <p>
+                            Charlotte Drouilly est diplômée de l'<strong
+                                >EKMA (École de Kinésiologie Multidisciplinaire
+                                Appliquée)</strong
+                            > en mars 2023, et certifiée en constellation familiale
+                            sur l'eau.
+                        </p>
+                    </section>
+
+                    <section>
+                        <h2 class="font-bold text-2xl mb-4">
+                            6. Propriété intellectuelle
+                        </h2>
+                        <p class="mb-3">
+                            L'ensemble des contenus du site (textes,
+                            photographies, logo, charte graphique, code source)
+                            sont la propriété exclusive de Charlotte Drouilly ou
+                            de leurs auteurs respectifs et sont protégés par le
+                            Code de la propriété intellectuelle.
+                        </p>
+                        <p>
+                            Toute reproduction, représentation, modification ou
+                            exploitation, totale ou partielle, par quelque
+                            procédé que ce soit, sans autorisation écrite
+                            préalable, est strictement interdite et
+                            constituerait une contrefaçon sanctionnée par les
+                            articles L.335-2 et suivants du Code de la propriété
+                            intellectuelle.
+                        </p>
+                    </section>
+
+                    <section>
+                        <h2 class="font-bold text-2xl mb-4">
+                            7. Données personnelles
+                        </h2>
+                        <p>
+                            Les modalités de traitement des données personnelles
+                            sont détaillées dans la
+                            <a
+                                href="/politique-de-confidentialite"
+                                class="text-primary hover:underline"
+                                >politique de confidentialité</a
+                            >.
+                        </p>
+                    </section>
+
+                    <section>
+                        <h2 class="font-bold text-2xl mb-4">8. Cookies</h2>
+                        <p>
+                            Le site ne dépose aucun cookie de mesure d'audience
+                            ni aucun traceur publicitaire. Certains contenus
+                            tiers (Calendly, Google Maps, YouTube) peuvent
+                            déposer leurs propres cookies lors de leur
+                            chargement.
+                        </p>
+                    </section>
+
+                    <section>
+                        <h2 class="font-bold text-2xl mb-4">
+                            9. Droit applicable et juridiction
+                        </h2>
+                        <p>
+                            Les présentes mentions légales sont régies par le
+                            droit français. En cas de litige, et à défaut
+                            d'accord amiable, compétence est donnée aux
+                            tribunaux français.
+                        </p>
+                    </section>
+
+                    <section>
+                        <h2 class="font-bold text-2xl mb-4">10. Contact</h2>
+                        <p>
+                            Pour toute question relative à ces mentions
+                            légales, vous pouvez contacter Charlotte Drouilly
+                            par email à
+                            <a
+                                href="mailto:charlottedrouilly.kinesiologue@gmail.com"
+                                class="text-primary hover:underline break-all"
+                                >charlottedrouilly.kinesiologue@gmail.com</a
+                            > ou par téléphone au
+                            <a
+                                href="tel:+33617972192"
+                                class="text-primary hover:underline"
+                                >06 17 97 21 92</a
+                            >.
+                        </p>
+                    </section>
+                </article>
+            </div>
+        </section>
+    </main>
+</Layout>
